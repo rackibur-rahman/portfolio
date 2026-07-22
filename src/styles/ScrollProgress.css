@@ -1,0 +1,48 @@
+.scroll-progress{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+height:3px;
+
+width:0;
+
+z-index:99999;
+
+background:linear-gradient(
+90deg,
+#4da3ff,
+#70b7ff,
+#4da3ff
+);
+
+background-size:200%;
+
+animation:progressGlow 3s linear infinite;
+
+box-shadow:
+0 0 10px rgba(77,163,255,.5),
+0 0 20px rgba(77,163,255,.3);
+
+transition:width .1s linear;
+
+}
+
+@keyframes progressGlow{
+
+0%{
+
+background-position:0%;
+
+}
+
+100%{
+
+background-position:200%;
+
+}
+
+}

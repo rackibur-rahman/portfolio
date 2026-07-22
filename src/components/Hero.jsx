@@ -1,5 +1,6 @@
 import "../styles/Hero.css";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { TypeAnimation } from "react-type-animation";
 
 function Hero() {
   return (
@@ -12,12 +13,32 @@ function Hero() {
           Rackibur Rahman
         </h1>
 
-        <h2 data-aos="fade-up" data-aos-delay="300">
-          QA Lead Engineer
+        <h2 className="typing-title">
+          <TypeAnimation
+            sequence={[
+              "QA Lead Engineer",
+              2000,
+              "Mobile Testing",
+              2000,
+              "Web Testing",
+              2000,
+              "API Testing",
+              2000,
+              "Automation Testing",
+              2000,
+              "AI Feature Testing",
+              2000,
+              "Release Validation",
+              2000,
+            ]}
+            wrapper="span"
+            speed={45}
+            repeat={Infinity}
+          />
         </h2>
 
         <p className="tagline">
-          6+ Years of Experience in
+          6+ Years of Experience with Ensuring Quality Across
           <br />
           Mobile • Web • API • Automation Testing
         </p>

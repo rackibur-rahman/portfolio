@@ -1,0 +1,76 @@
+.tech-stack {
+  max-width: 1200px;
+  margin: auto;
+  padding: 90px 20px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 25px;
+}
+
+.tech-card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 18px;
+
+  padding: 28px 20px;
+
+  text-align: center;
+
+  transition: all .35s ease;
+}
+
+.tech-card:hover {
+
+  transform: translateY(-8px);
+
+  border-color: #4da3ff;
+
+  box-shadow: 0 15px 30px rgba(77,163,255,.18);
+
+}
+
+.tech-card img{
+
+  width:64px;
+  height:64px;
+
+  object-fit:contain;
+
+  margin-bottom:18px;
+
+}
+
+.tech-card span{
+
+display:block;
+
+color:white;
+
+font-size:17px;
+
+font-weight:600;
+
+}
+
+@media(max-width:768px){
+
+.tech-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:500px){
+
+.tech-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}

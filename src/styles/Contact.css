@@ -1,93 +1,129 @@
 .contact {
-  padding: 90px 20px;
+
+  padding: 70px 20px 100px;
+
   text-align: center;
+
 }
 
+.contact .section-title h2 {
 
-.contact-container {
-  max-width: 900px;
-  margin: auto;
-}
-
-
-.contact h2 {
   color: #4da3ff;
-  font-size: 40px;
-  margin-bottom: 20px;
+
+  font-size: 42px;
+
+  margin-bottom: 15px;
+
 }
 
+.contact .section-title p {
 
-.contact-description {
   color: #cbd5e1;
-  font-size: 18px;
-  line-height: 1.7;
-  max-width: 650px;
-  margin: auto;
-}
 
+  font-size: 18px;
+
+  max-width: 650px;
+
+  margin: auto;
+
+  line-height: 1.8;
+
+}
 
 .contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 35px 0;
-  flex-wrap: wrap;
-}
 
+  margin-top: 45px;
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 22px;
+
+}
 
 .contact-links a {
+
   display: flex;
+
   align-items: center;
-  gap: 8px;
 
-  background: #111827;
-  color: #ffffff;
-
-  padding: 12px 25px;
-  border-radius: 30px;
-
-  text-decoration: none;
-
-  border: 1px solid #1f2937;
-
-  transition: 0.3s;
-}
-
-
-.contact-links a:hover {
-  border-color: #4da3ff;
-  color: #4da3ff;
-  transform: translateY(-4px);
-}
-
-
-.contact .resume-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   gap: 10px;
 
-  margin-top: 10px;
-  padding: 14px 35px;
+  min-width: 200px;
 
-  background: #4da3ff !important;
-  color: #050816 !important;
+  justify-content: center;
 
-  border-radius: 30px;
-  border: 2px solid #4da3ff;
+  padding: 18px 24px;
 
   text-decoration: none;
-  font-weight: 700;
-  font-size: 16px;
 
-  transition: all 0.3s ease;
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  border-radius: 18px;
+
+  background: rgba(17, 24, 39, 0.55);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.30);
+
+  transition: .35s;
+
 }
 
+.contact-links a svg {
 
-.contact .resume-btn:hover {
-  background: white !important;
-  color: #050816 !important;
-  border-color: white;
+  font-size: 24px;
 
-  transform: translateY(-4px);
+  color: #4da3ff;
+
+}
+
+.contact-links a:hover {
+
+  transform: translateY(-8px);
+
+  border-color: #4da3ff;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.45),
+    0 0 25px rgba(77,163,255,.25);
+
+}
+
+.contact-links a:hover svg {
+
+  transform: scale(1.15);
+
+}
+
+@media (max-width:768px){
+
+.contact-links{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.contact-links a{
+
+width:100%;
+
+max-width:320px;
+
+}
+
 }
