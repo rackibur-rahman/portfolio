@@ -1,5 +1,10 @@
 import "../styles/Hero.css";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 
 function Hero() {
@@ -94,6 +99,15 @@ function Hero() {
 
           <a href="mailto:rackibur.rahman@gmail.com">
             <FaEnvelope />
+          </a>
+
+          <a
+            href="https://wa.me/8801767360444?text=Hello%20Rackibur,%20I%20came%20across%20your%20portfolio%20and%20was%20impressed%20with%20your%20QA%20experience.%20I'd%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you."
+            target="_blank"
+            rel="noreferrer"
+            aria-label="WhatsApp"
+          >
+            <FaWhatsapp />
           </a>
 
         </div>

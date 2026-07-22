@@ -9,8 +9,12 @@ import App from "./App.jsx";
 
 
 AOS.init({
-  duration: 800,
+  duration: 500,
+  easing: "ease-out-cubic",
   once: true,
+  offset: 50,
+  delay: 0,
+  mirror: false,
 });
 
 
