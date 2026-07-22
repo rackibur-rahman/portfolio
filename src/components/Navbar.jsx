@@ -7,7 +7,7 @@ function Navbar() {
       <div className="logo-container">
 
         <div className="logo">
-          <a href="#home">Rackibur.</a>
+          <a href="#home">Rackibur QA Engineer.</a>
         </div>
 
         <div className="brand-tagline">
