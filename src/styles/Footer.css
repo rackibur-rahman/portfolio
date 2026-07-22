@@ -1,0 +1,27 @@
+.footer {
+  margin-top: 60px;
+  padding: 30px 20px;
+
+  text-align: center;
+
+  border-top: 1px solid #1f2937;
+
+  color: #9ca3af;
+}
+
+
+.footer p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+
+.footer span {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+
+.footer:hover span {
+  color: #4da3ff;
+}

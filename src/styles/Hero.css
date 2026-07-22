@@ -1,0 +1,157 @@
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.greeting {
+  color: #4da3ff;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.hero h2 {
+  font-size: 34px;
+  color: #4da3ff;
+  margin-bottom: 20px;
+}
+
+.tagline {
+  font-size: 22px;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #b5b5b5;
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 650px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 30px;
+  padding: 14px 35px;
+
+  background: #4da3ff;
+  color: #050816;
+
+  border-radius: 30px;
+
+  text-decoration: none;
+  font-weight: 700;
+
+  border: 2px solid #4da3ff;
+
+  transition: all 0.3s ease;
+}
+
+
+.btn:hover {
+  background: white;
+  color: #050816;
+  border-color: white;
+  transform: translateY(-4px);
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid #4da3ff;
+}
+
+.secondary:hover {
+  background: #4da3ff;
+}
+
+.social-links {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 28px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #4da3ff;
+  transform: scale(1.15);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #4da3ff;
+  box-shadow: 0 0 35px rgba(77, 163, 255, 0.4);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .tagline {
+    font-size: 18px;
+  }
+
+  .description {
+    margin: 0 auto;
+  }
+
+  .buttons,
+  .social-links {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+  }
+}

@@ -1,15 +1,38 @@
+import "../styles/Navbar.css";
+
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="logo">Rackibur.</div>
+
+      <div className="logo-container">
+
+        <div className="logo">
+          <a href="#home">Rackibur.</a>
+        </div>
+
+        <div className="brand-tagline">
+          Breaking apps before users do 🐞
+        </div>
+
+        <div className="brand-subtag">
+          Quality 🛡️ isn't a phase, it's a mindset.
+        </div>
+
+      </div>
+
 
       <ul className="nav-links">
+
         <li>
           <a href="#home">Home</a>
         </li>
 
         <li>
           <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#skills">Skills</a>
         </li>
 
         <li>
@@ -23,7 +46,18 @@ function Navbar() {
         <li>
           <a href="#contact">Contact</a>
         </li>
+
       </ul>
+
+
+      <a
+        href="/Rackibur_Rahman_Resume.pdf"
+        download
+        className="resume-btn"
+      >
+        Resume
+      </a>
+
     </nav>
   );
 }
