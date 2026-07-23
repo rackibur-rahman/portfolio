@@ -42,7 +42,7 @@ function Stats() {
         >
 
           <h2>
-            9
+            9+
           </h2>
 
           <p>

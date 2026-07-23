@@ -138,7 +138,7 @@ const nanoSoftProjects = [
   {
     name: "Unfold",
     icon: "/icons/unfold.png",
-    role: "QA Lead Engineer",
+    role: "SQA Engineer",
     platform: ["Android", "iOS"],
     description:
       "Creative content creation platform focused on stories, reels, and visual content.",
@@ -158,9 +158,7 @@ const nanoSoftProjects = [
     appstore:
       "https://apps.apple.com/us/app/unfold-reels-story-maker/id1247275033",
   },
-];
 
-const dabiProjects = [
   {
     name: "Shudokkho",
     icon: "/icons/shudokkho.png",
@@ -224,6 +222,71 @@ const dabiProjects = [
       "https://gobadi-ehaat.com/",
   },
 ];
+
+// const dabiProjects = [
+//   {
+//     name: "Shudokkho",
+//     icon: "/icons/shudokkho.png",
+//     role: "SQA Engineer",
+//     platform: ["Android"],
+//     description:
+//       "Skills development platform designed to improve learning and workforce capabilities.",
+//     testing: [
+//       "Functional Testing",
+//       "UAT",
+//       "Release Validation",
+//     ],
+//     tools: [
+//       "Jira",
+//       "BrowserStack",
+//       "LambdaTest",
+//     ],
+//     playstore:
+//       "https://play.google.com/store/apps/details?id=com.mpower.android.app.lpin.crm&hl=en",
+//   },
+
+//   {
+//     name: "Khamarbondhu",
+//     icon: "/icons/khamarbondhu.png",
+//     role: "SQA Engineer",
+//     platform: ["Android"],
+//     description:
+//       "Agriculture-focused mobile application providing smart farming services.",
+//     testing: [
+//       "Functional Testing",
+//       "Regression Testing",
+//       "UAT",
+//     ],
+//     tools: [
+//       "Jira",
+//       "BrowserStack",
+//       "LambdaTest",
+//     ],
+//     playstore:
+//       "https://play.google.com/store/apps/details?id=com.mpower.app.mdairy&hl=bn",
+//   },
+
+//   {
+//     name: "Gobadi E-Haat",
+//     icon: "/icons/gobadi.png",
+//     role: "SQA Engineer",
+//     platform: ["Web"],
+//     description:
+//       "Digital livestock marketplace connecting buyers and sellers across Bangladesh.",
+//     testing: [
+//       "Functional Testing",
+//       "API Testing",
+//       "Regression Testing",
+//     ],
+//     tools: [
+//       "Jira",
+//       "BrowserStack",
+//       "LambdaTest",
+//     ],
+//     website:
+//       "https://gobadi-ehaat.com/",
+//   },
+// ];
 
 function Projects() {
 
@@ -375,18 +438,18 @@ function Projects() {
       </div>
 
 
-      <h3 className="company-title">
+      {/* <h3 className="company-title">
         🏢 NanoSoftQA
-      </h3>
+      </h3> */}
 
       {renderProjects(nanoSoftProjects)}
 
 
-      <h3 className="company-title">
+      {/* <h3 className="company-title">
         🏢 DABI Moulik Unnayan Sangstha
-      </h3>
+      </h3> */}
 
-      {renderProjects(dabiProjects)}
+      {/* {renderProjects(dabiProjects)} */}
 
     </section>
 
