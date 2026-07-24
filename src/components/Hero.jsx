@@ -11,10 +11,9 @@ function Hero() {
   return (
     <section className="hero" data-aos="fade-up">
       <div className="hero-text" data-aos="fade-right">
-
         <p className="greeting">👋 Hello, I'm</p>
 
-        <h1 data-aos="fade-up" data-aos-delay="200">
+        <h1 data-aos="fade-up" data-aos-delay="100">
           Rackibur Rahman
         </h1>
 
@@ -48,19 +47,67 @@ function Hero() {
           Mobile • Web • API • Automation Testing
         </p>
 
-        <p 
+        <p
           className="description"
           data-aos="fade-up"
-          data-aos-delay="400"
+          data-aos-delay="200"
         >
           Passionate about delivering high-quality software through
           manual testing, API validation, automation, and QA leadership.
         </p>
 
-        <div 
+        <p
+          className="connect-text"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          Connect with me
+        </p>
+
+        <div
+          className="social-links"
+          data-aos="fade-up"
+          data-aos-delay="350"
+        >
+          <a
+            href="https://github.com/rackibur-rahman"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+          >
+            <FaGithub />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/rackibur-rahman/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin />
+          </a>
+
+          <a
+            href="mailto:rackibur.rahman@gmail.com"
+            aria-label="Email"
+          >
+            <FaEnvelope />
+          </a>
+
+          <a
+            href="https://wa.me/8801767360444?text=Hello%20Rackibur,%20I%20came%20across%20your%20portfolio%20and%20was%20impressed%20with%20your%20QA%20experience.%20I'd%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you."
+            target="_blank"
+            rel="noreferrer"
+            aria-label="WhatsApp"
+          >
+            <FaWhatsapp />
+          </a>
+        </div>
+
+        <div
           className="buttons"
           data-aos="fade-up"
-          data-aos-delay="500"
+          data-aos-delay="450"
         >
           <a
             href="/Rackibur_Rahman_Resume.pdf"
@@ -74,56 +121,16 @@ function Hero() {
             View Projects
           </a>
         </div>
-
-        <div 
-          className="social-links"
-          data-aos="fade-up"
-          data-aos-delay="600"
-        >
-
-          <a
-            href="https://github.com/rackibur-rahman"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaGithub />
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/rackibur-rahman/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaLinkedin />
-          </a>
-
-          <a href="mailto:rackibur.rahman@gmail.com">
-            <FaEnvelope />
-          </a>
-
-          <a
-            href="https://wa.me/8801767360444?text=Hello%20Rackibur,%20I%20came%20across%20your%20portfolio%20and%20was%20impressed%20with%20your%20QA%20experience.%20I'd%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you."
-            target="_blank"
-            rel="noreferrer"
-            aria-label="WhatsApp"
-          >
-            <FaWhatsapp />
-          </a>
-
-        </div>
-
       </div>
 
-      <div 
+      <div
         className="hero-image"
         data-aos="fade-left"
       >
-
         <img
           src="/profile.png"
           alt="Rackibur Rahman"
         />
-
       </div>
     </section>
   );

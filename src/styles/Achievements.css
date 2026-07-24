@@ -1,69 +1,549 @@
+/* =========================================================
+   ACHIEVEMENTS SECTION
+   Premium Glassmorphism v2.0
+========================================================= */
+
 .achievements {
   max-width: 1200px;
   margin: auto;
   padding: 90px 20px;
 }
 
+/* Section Title */
+
+.achievements .section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.achievements .section-title h2 {
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.achievements .section-title p {
+  color: #94a3b8;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Grid */
+
 .achievement-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 28px;
 }
+
+/* Card */
 
 .achievement-card {
-  background: #111827;
-  border: 1px solid #1f2937;
-  border-radius: 18px;
-  padding: 35px 25px;
+
+  position: relative;
+
+  isolation: isolate;
+
+  overflow: hidden;
+
+  background: rgba(17, 24, 39, 0.55);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  border-radius: 22px;
+
+  padding: 38px 28px;
+
   text-align: center;
-  transition: .35s;
+
+  transition:
+    transform .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
+
 }
 
+/* Gradient Top Border */
+
+.achievement-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:0;
+
+  width:100%;
+  height:4px;
+
+  background:linear-gradient(
+      90deg,
+      #4da3ff,
+      #60a5fa,
+      #8b5cf6
+  );
+
+  opacity:.95;
+
+}
+
+/* Glass Shine */
+
+.achievement-card::after{
+
+  content:"";
+
+  position:absolute;
+
+  top:-45%;
+  left:-170%;
+
+  width:70%;
+  height:190%;
+
+  background:linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.12),
+      transparent
+  );
+
+  transform:skewX(-25deg);
+
+  transition:left .9s ease;
+
+  pointer-events:none;
+
+  z-index:0;
+
+}
+
+/* Hover */
+
 .achievement-card:hover{
-  transform: translateY(-8px);
-  border-color:#4da3ff;
-  box-shadow:0 15px 30px rgba(77,163,255,.15);
+
+  transform:
+      translateY(-10px)
+      scale(1.02);
+
+  border-color:rgba(77,163,255,.35);
+
+  box-shadow:
+      0 18px 45px rgba(77,163,255,.18),
+      0 0 25px rgba(77,163,255,.08);
+
+}
+
+.achievement-card:hover::after{
+
+  left:160%;
+
+}
+
+/* =========================================================
+   ICON DESIGN
+========================================================= */
+
+.achievement-icon{
+
+  position:relative;
+
+  z-index:2;
+
+  width:78px;
+
+  height:78px;
+
+  margin:0 auto 24px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border-radius:50%;
+
+  font-size:30px;
+
+  transition:
+      transform .35s ease,
+      box-shadow .35s ease;
+
+}
+
+/* Floating animation */
+
+@keyframes floatIcon{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-4px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
 }
 
 .achievement-icon{
-  width:70px;
-  height:70px;
-  margin:auto;
 
-  display:flex;
-  justify-content:center;
-  align-items:center;
+animation:floatIcon 4s ease-in-out infinite;
 
-  border-radius:50%;
-  background:#4da3ff;
+}
 
-  color:#050816;
-  font-size:28px;
+/* Hover */
 
-  margin-bottom:20px;
+.achievement-card:hover .achievement-icon{
+
+transform:
+scale(1.12)
+rotate(-8deg);
+
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.achievement-icon,
+.achievement-card h3,
+.achievement-card p{
+
+position:relative;
+
+z-index:2;
+
 }
 
 .achievement-card h3{
 
-color:white;
-font-size:26px;
-margin-bottom:12px;
+color:#ffffff;
+
+font-size:28px;
+
+font-weight:700;
+
+margin-bottom:14px;
+
+letter-spacing:.3px;
+
+transition:.3s;
+
+}
+
+.achievement-card:hover h3{
+
+color:#ffffff;
 
 }
 
 .achievement-card p{
 
 color:#cbd5e1;
-line-height:1.6;
+
+font-size:15px;
+
+line-height:1.8;
+
+transition:.3s;
 
 }
 
-@media(max-width:768px){
+.achievement-card:hover p{
 
-.achievement-grid{
-
-grid-template-columns:1fr;
+color:#e2e8f0;
 
 }
 
+/* =========================================================
+   SUBTLE INNER GLOW
+========================================================= */
+
+.achievement-card{
+
+box-shadow:
+inset 0 1px 0 rgba(255,255,255,.04);
+
 }
+
+/* =========================================================
+   BACKGROUND LIGHT
+========================================================= */
+
+.achievement-card span{
+
+position:relative;
+
+z-index:2;
+
+}
+
+/* =========================================================
+   PREMIUM VISUAL EFFECTS
+========================================================= */
+
+/* Soft radial glow behind icon */
+
+.achievement-icon::before{
+
+content:"";
+
+position:absolute;
+
+inset:-10px;
+
+border-radius:50%;
+
+background:radial-gradient(
+circle,
+rgba(255,255,255,.10) 0%,
+transparent 70%
+);
+
+opacity:.6;
+
+z-index:-1;
+
+transition:.35s;
+
+}
+
+.achievement-card:hover .achievement-icon::before{
+
+transform:scale(1.25);
+
+opacity:1;
+
+}
+
+/* =========================================================
+   CARD BACKGROUND EFFECT
+========================================================= */
+
+.achievement-card{
+
+background:
+linear-gradient(
+180deg,
+rgba(255,255,255,.04),
+rgba(255,255,255,.015)
+),
+rgba(17,24,39,.58);
+
+}
+
+/* Bottom Glow */
+
+.achievement-card::selection{
+
+background:transparent;
+
+}
+
+/* =========================================================
+   PREMIUM HOVER
+========================================================= */
+
+.achievement-card:hover{
+
+background:
+linear-gradient(
+180deg,
+rgba(255,255,255,.06),
+rgba(255,255,255,.02)
+),
+rgba(17,24,39,.65);
+
+}
+
+/* Slight icon brightness */
+
+.achievement-card:hover .achievement-icon{
+
+filter:brightness(1.08);
+
+}
+
+/* =========================================================
+   TEXT POLISH
+========================================================= */
+
+.achievement-card h3{
+
+text-wrap:balance;
+
+}
+
+.achievement-card p{
+
+max-width:220px;
+
+margin:auto;
+
+}
+
+/* =========================================================
+   SMOOTH TRANSITIONS
+========================================================= */
+
+.achievement-card,
+.achievement-card::before,
+.achievement-card::after,
+.achievement-icon,
+.achievement-icon::before,
+.achievement-card h3,
+.achievement-card p{
+
+transition:
+all .35s ease;
+
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 992px) {
+
+  .achievements {
+    padding: 80px 20px;
+  }
+
+  .achievement-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .achievement-card {
+    padding: 34px 24px;
+  }
+
+  .achievement-card h3 {
+    font-size: 25px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .achievements {
+    padding: 70px 20px;
+  }
+
+  .achievements .section-title {
+    margin-bottom: 45px;
+  }
+
+  .achievements .section-title h2 {
+    font-size: 34px;
+  }
+
+  .achievements .section-title p {
+    font-size: 16px;
+  }
+
+  .achievement-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .achievement-card {
+    padding: 32px 22px;
+    border-radius: 18px;
+  }
+
+  .achievement-icon {
+    width: 68px;
+    height: 68px;
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .achievement-card h3 {
+    font-size: 24px;
+  }
+
+  .achievement-card p {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .achievements {
+    padding: 60px 16px;
+  }
+
+  .achievements .section-title h2 {
+    font-size: 30px;
+  }
+
+  .achievement-card {
+    padding: 28px 18px;
+  }
+
+  .achievement-icon {
+    width: 62px;
+    height: 62px;
+    font-size: 24px;
+  }
+
+  .achievement-card h3 {
+    font-size: 22px;
+  }
+
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .achievement-card,
+  .achievement-card::before,
+  .achievement-card::after,
+  .achievement-icon,
+  .achievement-icon::before {
+
+    animation: none !important;
+    transition: none !important;
+
+  }
+
+}
+
+/* =========================================================
+   PERFORMANCE
+========================================================= */
+
+.achievement-card{
+
+will-change:
+transform,
+box-shadow;
+
+}
+
+.achievement-icon{
+
+will-change:
+transform;
+
+}
+
+/* =========================================================
+   END OF FILE
+========================================================= */

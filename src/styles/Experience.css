@@ -1,91 +1,622 @@
 .experience {
-  max-width: 1100px;
+  max-width: 1150px;
   margin: auto;
-  padding: 80px 20px;
+  padding: 90px 20px;
 }
 
 .timeline {
   position: relative;
   margin-top: 60px;
-  padding-left: 35px;
+  padding-left: 40px;
 }
 
 .timeline::before {
   content: "";
   position: absolute;
-  left: 12px;
+  left: 14px;
   top: 0;
-  width: 3px;
+  width: 4px;
   height: 100%;
-  background: #4da3ff;
+  border-radius: 50px;
+  background: linear-gradient(
+    180deg,
+    #3b82f6,
+    #22c55e,
+    #8b5cf6
+  );
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 55px;
 }
 
 .timeline-dot {
   position: absolute;
-  left: -31px;
-  top: 8px;
+  left: -34px;
+  top: 12px;
+
   width: 18px;
   height: 18px;
-  background: #4da3ff;
+
   border-radius: 50%;
   border: 4px solid #050816;
-  box-shadow: 0 0 15px rgba(77, 163, 255, 0.6);
+
+  transition: .35s;
+}
+
+.timeline-dot.nanosoft {
+  background: #3b82f6;
+  box-shadow: 0 0 18px rgba(59,130,246,.6);
+}
+
+.timeline-dot.dabi {
+  background: #22c55e;
+  box-shadow: 0 0 18px rgba(34,197,94,.55);
+}
+
+.timeline-dot.catalyst {
+  background: #a855f7;
+  box-shadow: 0 0 18px rgba(168,85,247,.55);
+}
+
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.25);
 }
 
 .timeline-content {
   background: #111827;
+  border-radius: 18px;
+  padding: 32px;
   border: 1px solid #1f2937;
-  border-radius: 16px;
-  padding: 28px;
-  transition: all 0.3s ease;
+
+  transition: .35s;
+}
+
+.timeline-content.nanosoft {
+  border-left: 5px solid #3b82f6;
+}
+
+.timeline-content.dabi {
+  border-left: 5px solid #22c55e;
+}
+
+.timeline-content.catalyst {
+  border-left: 5px solid #a855f7;
 }
 
 .timeline-content:hover {
-  transform: translateY(-6px);
-  border-color: #4da3ff;
-  box-shadow: 0 12px 30px rgba(77, 163, 255, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.35);
 }
 
-.timeline-content h3 {
-  color: #4da3ff;
-  font-size: 26px;
-  margin-bottom: 6px;
+/* ===========================
+   Header
+=========================== */
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 12px;
 }
 
-.timeline-content h4 {
+.job-title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  width: 100%;
+}
+
+.job-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+
+/* Designation Color */
+
+.job-title.lead {
+  color: #fbbf24;
+}
+
+.job-title.sqa {
+  color: #60a5fa;
+}
+
+.job-title.manager {
+  color: #34d399;
+}
+
+.job-title.analyst {
+  color: #c084fc;
+}
+
+.job-icon {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+
+  transition: .3s ease;
+
+}
+
+
+/* Job Icon Colors */
+
+.job-icon.lead {
+
+  color: #fbbf24;
+
+  filter: drop-shadow(0 0 8px rgba(251,191,36,.8));
+
+}
+
+
+.job-icon.sqa {
+
+  color: #60a5fa;
+
+  filter: drop-shadow(0 0 8px rgba(96,165,250,.8));
+
+}
+
+
+.job-icon.manager {
+
+  color: #34d399;
+
+  filter: drop-shadow(0 0 8px rgba(52,211,153,.8));
+
+}
+
+
+.job-icon.analyst {
+
+  color: #c084fc;
+
+  filter: drop-shadow(0 0 8px rgba(192,132,252,.8));
+
+}
+
+
+.job-title:hover .job-icon {
+
+  transform: scale(1.15) rotate(8deg);
+
+}
+
+/* ===========================
+   Status Badge
+=========================== */
+
+.status-badge {
+  padding: 7px 14px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+
+  white-space: nowrap;
+}
+
+.status-badge.current {
+  background: rgba(34,197,94,.15);
+  color: #22c55e;
+  border: 1px solid rgba(34,197,94,.35);
+}
+
+.status-badge.previous {
+  background: rgba(148,163,184,.12);
+  color: #cbd5e1;
+  border: 1px solid rgba(148,163,184,.25);
+}
+
+/* ===========================
+   Company
+=========================== */
+
+.company-name {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 10px 0 8px;
+
+  padding-left: 2px;
+
+  font-size: 21px;
+
+  font-weight: 700;
+
   color: #ffffff;
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 8px;
+
 }
+
+
+.company-name svg {
+
+  font-size: 20px;
+
+}
+
+
+/* Company Icon Colors */
+
+.company-icon {
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:22px;
+
+  transition:.3s ease;
+
+}
+
+
+/* Company Icon Colors */
+
+.company-name.lead .company-icon {
+
+  color:#fbbf24;
+
+  filter:drop-shadow(0 0 8px rgba(251,191,36,.8));
+
+}
+
+
+.company-name.sqa .company-icon {
+
+  color:#60a5fa;
+
+  filter:drop-shadow(0 0 8px rgba(96,165,250,.8));
+
+}
+
+
+.company-name.manager .company-icon {
+
+  color:#34d399;
+
+  filter:drop-shadow(0 0 8px rgba(52,211,153,.8));
+
+}
+
+
+.company-name.analyst .company-icon {
+
+  color:#c084fc;
+
+  filter:drop-shadow(0 0 8px rgba(192,132,252,.8));
+
+}
+
+
+.company-name:hover .company-icon {
+
+  transform:scale(1.2);
+
+}
+
+/* ===========================
+   Promotion
+=========================== */
+
+.promotion-note {
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  margin:10px 0 15px;
+
+  font-size:14px;
+
+  font-style:italic;
+
+  font-weight:600;
+
+  color:#22c55e;
+
+}
+
+
+.promotion-icon {
+
+  width:26px;
+
+  height:26px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:rgba(34,197,94,.15);
+
+  color:#22c55e;
+
+  border:1px solid rgba(34,197,94,.35);
+
+  box-shadow:
+  0 0 12px rgba(34,197,94,.5);
+
+  animation:pulseArrow 1.8s infinite;
+
+}
+
+
+@keyframes pulseArrow {
+
+  0% {
+
+    transform:translateY(0);
+
+  }
+
+
+  50% {
+
+    transform:translateY(-4px);
+
+  }
+
+
+  100% {
+
+    transform:translateY(0);
+
+  }
+
+}
+
+/* ===========================
+   Duration
+=========================== */
 
 .duration {
-  display: inline-block;
-  margin-bottom: 18px;
-  color: #9ca3af;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 24px;
+
+  padding: 8px 15px;
+
+  border-radius: 999px;
+
+  background: rgba(77,163,255,.08);
+
+  border: 1px solid rgba(77,163,255,.22);
+
+  color: #dbeafe;
+
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-.timeline-content ul {
+/* ===========================
+   Responsibilities
+=========================== */
+
+.experience-list {
+  list-style: none;
   margin: 0;
-  padding-left: 20px;
+  padding: 0;
 }
 
-.timeline-content li {
+.experience-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  margin-bottom: 14px;
+
   color: #d1d5db;
+
   line-height: 1.8;
-  margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
+.check-icon {
+  flex-shrink: 0;
+
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 2px;
+
+  border-radius: 50%;
+
+  background: rgba(34,197,94,.12);
+
+  color: #22c55e;
+
+  font-size: 12px;
+
+  border: 1px solid rgba(34,197,94,.25);
+}
+
+.timeline-content:hover .check-icon {
+  transform: scale(1.08);
+  transition: .25s;
+}
+
+/* ===========================
+   Client Section
+=========================== */
+
+.client-section {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid #1f2937;
+}
+
+.client-section h5 {
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.client-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.client-pill {
+  padding: 8px 15px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: all .3s ease;
+
+  background: rgba(77,163,255,.10);
+
+  color: #dbeafe;
+
+  border: 1px solid rgba(77,163,255,.22);
+}
+
+.client-pill:hover {
+  transform: translateY(-3px);
+  background: #4da3ff;
+  color: #050816;
+}
+
+/* ===========================
+   Company Accent Hover
+=========================== */
+
+.timeline-content.nanosoft:hover {
+  border-left-color: #3b82f6;
+  box-shadow: 0 18px 40px rgba(59,130,246,.18);
+}
+
+.timeline-content.dabi:hover {
+  border-left-color: #22c55e;
+  box-shadow: 0 18px 40px rgba(34,197,94,.18);
+}
+
+.timeline-content.catalyst:hover {
+  border-left-color: #a855f7;
+  box-shadow: 0 18px 40px rgba(168,85,247,.18);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 900px) {
+
   .timeline {
-    padding-left: 25px;
+    padding-left: 30px;
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-dot {
+    left: -24px;
+  }
+
+  .timeline-content {
+    background: #111827;
+    border-radius: 18px;
+
+    padding: 32px 32px 32px 38px;
+
+    border: 1px solid #1f2937;
+
+    transition: .35s;
+  }
+
+  .job-title-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .status-badge {
+    align-self: flex-start;
+  }
+
+  .job-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 0;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    line-height: 1.3;
+  }
+
+  /* ===========================
+   Designation Color
+=========================== */
+
+.timeline-content.nanosoft .job-title{
+  color:#60a5fa;
+}
+
+.timeline-content.dabi .job-title{
+  color:#34d399;
+}
+
+.timeline-content.catalyst .job-title{
+  color:#c084fc;
+}
+
+}
+
+@media (max-width: 600px) {
+
+  .experience {
+    padding: 70px 18px;
+  }
+
+  .timeline {
+    padding-left: 24px;
   }
 
   .timeline::before {
@@ -93,45 +624,150 @@
   }
 
   .timeline-dot {
-    left: -23px;
+    left: -18px;
     width: 16px;
     height: 16px;
+    border-width: 3px;
   }
 
   .timeline-content {
     padding: 22px;
   }
 
-  .timeline-content h3 {
+  .job-title {
     font-size: 22px;
+    gap: 10px;
   }
 
-  .timeline-content h4 {
-    font-size: 16px;
+  .job-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:25px;
   }
-}
 
-.client-section {
-  margin-top: 25px;
-}
+  
 
-.client-section h5 {
-  color: #4da3ff;
-  font-size: 16px;
-  margin-bottom: 12px;
-}
+  .company-name{
 
-.client-badges {
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  margin:12px 0 8px;
+
+  padding-left:2px;
+
+  font-size:21px;
+
+  font-weight:700;
+
+  color:#ffffff;
+
+  }
+
+  .company-icon {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+
+  transition: .3s ease;
 }
 
-.client-badges span {
-  background: rgba(77, 163, 255, 0.12);
-  color: #4da3ff;
-  padding: 7px 14px;
-  border-radius: 20px;
-  font-size: 14px;
-  border: 1px solid rgba(77, 163, 255, 0.25);
+
+/* Company icon colors */
+
+.company-name.lead .company-icon {
+  color: #fbbf24;
+  filter: drop-shadow(0 0 8px rgba(251,191,36,.8));
+}
+
+
+.company-name.sqa .company-icon {
+  color: #60a5fa;
+  filter: drop-shadow(0 0 8px rgba(96,165,250,.8));
+}
+
+
+.company-name.manager .company-icon {
+  color: #34d399;
+  filter: drop-shadow(0 0 8px rgba(52,211,153,.8));
+}
+
+
+.company-name.analyst .company-icon {
+  color: #c084fc;
+  filter: drop-shadow(0 0 8px rgba(192,132,252,.8));
+}
+
+
+.company-name:hover .company-icon {
+  transform: scale(1.2);
+}
+
+.company-icon {
+  font-size:18px;
+}
+
+  .promotion-note{
+
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  margin:8px 0 14px;
+
+  font-size:14px;
+
+  font-style:italic;
+
+  font-weight:500;
+
+  color:#22c55e;
+
+  opacity:.9;
+
+  }
+
+  .duration {
+    font-size: 13px;
+    padding: 7px 13px;
+  }
+
+  .experience-list li {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .check-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+
+  .client-badges {
+    gap: 8px;
+  }
+
+  .client-pill {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+
+}
+
+@media (max-width: 420px) {
+
+  .job-title {
+    font-size: 20px;
+  }
+
+  .status-badge {
+    font-size: 11px;
+    padding: 6px 11px;
+  }
+
 }

@@ -1,71 +1,420 @@
+/* =========================================================
+   QA TESTING TOOLBOX
+========================================================= */
+
 .tech-stack {
+
   max-width: 1200px;
+
   margin: auto;
+
   padding: 90px 20px;
-}
-
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 25px;
-}
-
-.tech-card {
-  background: #111827;
-  border: 1px solid #1f2937;
-  border-radius: 18px;
-
-  padding: 28px 20px;
-
-  text-align: center;
-
-  transition: all .35s ease;
-}
-
-.tech-card:hover {
-
-  transform: translateY(-8px);
-
-  border-color: #4da3ff;
-
-  box-shadow: 0 15px 30px rgba(77,163,255,.18);
 
 }
 
-.tech-card img{
+/* =========================================================
+   GRID
+========================================================= */
 
-  width:64px;
-  height:64px;
+.tech-grid{
 
-  object-fit:contain;
+display:grid;
 
-  margin-bottom:18px;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:26px;
 
 }
 
-.tech-card span{
+/* =========================================================
+   CARD
+========================================================= */
 
-display:block;
+.tech-card{
 
-color:white;
+position:relative;
 
-font-size:17px;
+overflow:hidden;
+
+isolation:isolate;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+padding:34px 22px;
+
+border-radius:22px;
+
+background:
+linear-gradient(
+180deg,
+rgba(255,255,255,.04),
+rgba(255,255,255,.015)
+),
+rgba(17,24,39,.58);
+
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:
+transform .35s ease,
+box-shadow .35s ease,
+border-color .35s ease;
+
+}
+
+/* =========================================================
+   TOP ACCENT
+========================================================= */
+
+.tech-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:4px;
+
+background:linear-gradient(
+90deg,
+#4da3ff,
+#60a5fa,
+#8b5cf6
+);
+
+}
+
+/* =========================================================
+   GLASS SHINE
+========================================================= */
+
+.tech-card::after{
+
+content:"";
+
+position:absolute;
+
+top:-45%;
+
+left:-170%;
+
+width:70%;
+
+height:190%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.12),
+transparent
+);
+
+transform:skewX(-25deg);
+
+transition:left .9s ease;
+
+pointer-events:none;
+
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.tech-card:hover{
+
+transform:
+translateY(-10px)
+scale(1.03);
+
+border-color:rgba(77,163,255,.35);
+
+box-shadow:
+0 20px 45px rgba(77,163,255,.18),
+0 0 25px rgba(77,163,255,.08);
+
+}
+
+.tech-card:hover::after{
+
+left:160%;
+
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.tech-logo-wrapper{
+
+position:relative;
+
+z-index:2;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+width:90px;
+
+height:90px;
+
+margin-bottom:22px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.03);
+
+transition:.35s;
+
+}
+
+.tech-logo-wrapper img{
+
+width:72px;
+
+height:72px;
+
+object-fit:contain;
+
+transition:.35s;
+
+}
+
+.tech-card:hover .tech-logo-wrapper{
+
+transform:
+scale(1.08)
+rotate(-6deg);
+
+}
+
+.tech-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+/* =========================================================
+   TOOL NAME
+========================================================= */
+
+.tech-card h3{
+
+position:relative;
+
+z-index:2;
+
+color:#ffffff;
+
+font-size:20px;
+
+font-weight:700;
+
+margin-bottom:16px;
+
+letter-spacing:.3px;
+
+transition:.3s;
+
+}
+
+.tech-card:hover h3{
+
+color:#ffffff;
+
+}
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.tech-badge{
+
+position:relative;
+
+z-index:2;
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:8px 16px;
+
+border-radius:999px;
+
+font-size:13px;
 
 font-weight:600;
+
+letter-spacing:.2px;
+
+backdrop-filter:blur(12px);
+
+-webkit-backdrop-filter:blur(12px);
+
+transition:all .35s ease;
+
+}
+
+.tech-card:hover .tech-badge{
+
+transform:translateY(-2px);
+
+box-shadow:0 8px 18px rgba(255,255,255,.08);
+
+}
+
+/* =========================================================
+   FLOATING LOGO
+========================================================= */
+
+@keyframes techFloat{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-5px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+.tech-logo-wrapper{
+
+animation:techFloat 4s ease-in-out infinite;
+
+}
+
+/* =========================================================
+   HOVER GLOW
+========================================================= */
+
+.tech-logo-wrapper::before{
+
+content:"";
+
+position:absolute;
+
+inset:-8px;
+
+border-radius:50%;
+
+background:radial-gradient(
+circle,
+rgba(255,255,255,.08),
+transparent 72%
+);
+
+opacity:.6;
+
+transition:.35s;
+
+z-index:-1;
+
+}
+
+.tech-card:hover .tech-logo-wrapper::before{
+
+transform:scale(1.25);
+
+opacity:1;
+
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:992px){
+
+.tech-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+gap:22px;
+
+}
 
 }
 
 @media(max-width:768px){
 
+.tech-stack{
+
+padding:70px 20px;
+
+}
+
 .tech-grid{
 
 grid-template-columns:repeat(2,1fr);
 
-}
+gap:18px;
 
 }
 
-@media(max-width:500px){
+.tech-card{
+
+padding:28px 18px;
+
+border-radius:18px;
+
+}
+
+.tech-logo-wrapper{
+
+width:78px;
+height:78px;
+
+margin-bottom:18px;
+
+}
+
+.tech-logo-wrapper img{
+
+width:60px;
+height:60px;
+
+}
+
+.tech-card h3{
+
+font-size:18px;
+
+}
+
+.tech-badge{
+
+font-size:12px;
+
+padding:7px 14px;
+
+}
+
+}
+
+@media(max-width:480px){
 
 .tech-grid{
 
@@ -73,4 +422,66 @@ grid-template-columns:1fr;
 
 }
 
+.tech-card{
+
+padding:26px 18px;
+
 }
+
+.tech-logo-wrapper{
+
+width:72px;
+height:72px;
+
+}
+
+.tech-logo-wrapper img{
+
+width:56px;
+height:56px;
+
+}
+
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+.tech-card,
+.tech-card::before,
+.tech-card::after,
+.tech-logo-wrapper,
+.tech-logo-wrapper::before,
+.tech-logo-wrapper img,
+.tech-badge{
+
+animation:none !important;
+
+transition:none !important;
+
+}
+
+}
+
+/* =========================================================
+   PERFORMANCE
+========================================================= */
+
+.tech-card{
+
+will-change:transform,box-shadow;
+
+}
+
+.tech-logo-wrapper{
+
+will-change:transform;
+
+}
+
+/* =========================================================
+   END OF FILE
+========================================================= */

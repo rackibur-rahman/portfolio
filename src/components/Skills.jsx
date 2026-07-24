@@ -32,8 +32,14 @@ function Skills() {
         >
 
           <h3>
-            <FaBug />
-            Testing
+            <div className="skill-title">
+              <FaBug />
+              <span>Testing</span>
+            </div>
+
+            <span className="skill-level expert">
+              🏆 Expert
+            </span>
           </h3>
 
           <div className="skill-tags">
@@ -62,8 +68,14 @@ function Skills() {
         >
 
           <h3>
-            <FaRobot />
-            Automation
+            <div className="skill-title">
+              <FaRobot />
+              <span>Automation</span>
+            </div>
+
+            <span className="skill-level advanced">
+              ⭐ Advanced
+            </span>
           </h3>
 
           <div className="skill-tags">
@@ -90,8 +102,14 @@ function Skills() {
         >
 
           <h3>
-            <FaServer />
-            API & Database
+            <div className="skill-title">
+              <FaServer />
+              <span>API & Database</span>
+            </div>
+
+            <span className="skill-level advanced">
+              ⭐ Advanced
+            </span>
           </h3>
 
           <div className="skill-tags">
@@ -118,8 +136,14 @@ function Skills() {
         >
 
           <h3>
-            <FaTools />
-            Tools
+            <div className="skill-title">
+              <FaTools />
+              <span>Tools</span>
+            </div>
+
+            <span className="skill-level expert">
+              🏆 Expert
+            </span>
           </h3>
 
           <div className="skill-tags">

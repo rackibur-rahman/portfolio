@@ -12,27 +12,193 @@
 }
 
 .skill-card {
+  position: relative;
+  overflow: hidden;
+
   background: #111827;
   border: 1px solid #1f2937;
   border-radius: 18px;
+
   padding: 30px;
-  transition: all 0.35s ease;
+
+  transition: all .35s ease;
+}
+
+/* Left Border Colors */
+
+.skill-card:nth-child(1) {
+  border-left: 4px solid #22C55E;
+}
+
+.skill-card:nth-child(2) {
+  border-left: 4px solid #A855F7;
+}
+
+.skill-card:nth-child(3) {
+  border-left: 4px solid #0EA5E9;
+}
+
+.skill-card:nth-child(4) {
+  border-left: 4px solid #F59E0B;
+}
+
+/* Glow Effect */
+
+.skill-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+      circle at top right,
+      rgba(255,255,255,.05),
+      transparent 60%
+  );
+
+  opacity: 0;
+
+  transition: .35s;
+
+}
+
+.skill-card:hover::before {
+
+  opacity: 1;
+
 }
 
 .skill-card:hover {
+
   transform: translateY(-8px);
-  border-color: #4da3ff;
-  box-shadow: 0 12px 30px rgba(77, 163, 255, 0.15);
+
+  box-shadow: 0 15px 35px rgba(77,163,255,.18);
+
 }
 
+.skill-card:nth-child(1):hover {
+
+  border-color:#22C55E;
+
+  box-shadow:0 15px 35px rgba(34,197,94,.18);
+
+}
+
+.skill-card:nth-child(2):hover {
+
+  border-color:#A855F7;
+
+  box-shadow:0 15px 35px rgba(168,85,247,.18);
+
+}
+
+.skill-card:nth-child(3):hover {
+
+  border-color:#0EA5E9;
+
+  box-shadow:0 15px 35px rgba(14,165,233,.18);
+
+}
+
+.skill-card:nth-child(4):hover {
+
+  border-color:#F59E0B;
+
+  box-shadow:0 15px 35px rgba(245,158,11,.18);
+
+}
+
+/* ==========================================
+   HEADING
+========================================== */
+
 .skill-card h3 {
+
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: #4da3ff;
+  gap: 12px;
+
+  color: #ffffff;
+
   font-size: 26px;
+
   margin-bottom: 25px;
+
+  font-weight: 700;
+
 }
+
+.skill-card h3 svg{
+
+  font-size: 28px;
+
+  transition: all .35s ease;
+
+}
+
+/* Category Icon Colors */
+
+.skill-card:nth-child(1) h3 svg{
+
+  color:#22C55E;
+
+}
+
+.skill-card:nth-child(2) h3 svg{
+
+  color:#A855F7;
+
+}
+
+.skill-card:nth-child(3) h3 svg{
+
+  color:#0EA5E9;
+
+}
+
+.skill-card:nth-child(4) h3 svg{
+
+  color:#F59E0B;
+
+}
+
+/* Icon Animation */
+
+.skill-card:hover h3 svg{
+
+  transform: rotate(-10deg) scale(1.18);
+
+}
+
+.skill-card:nth-child(1):hover h3{
+
+  color:#22C55E;
+
+}
+
+.skill-card:nth-child(2):hover h3{
+
+  color:#A855F7;
+
+}
+
+.skill-card:nth-child(3):hover h3{
+
+  color:#0EA5E9;
+
+}
+
+.skill-card:nth-child(4):hover h3{
+
+  color:#F59E0B;
+
+}
+
+/* ==========================================
+   SKILL TAGS
+========================================== */
 
 .skill-tags {
   display: flex;
@@ -41,40 +207,339 @@
 }
 
 .skill-tags span {
-  background: rgba(77, 163, 255, 0.12);
-  border: 1px solid rgba(77, 163, 255, 0.25);
-  color: #dbeafe;
+
   padding: 10px 16px;
+
   border-radius: 999px;
+
   font-size: 14px;
+
   font-weight: 500;
-  transition: all 0.3s ease;
+
+  transition: all .3s ease;
+
+  cursor: default;
+
 }
 
-.skill-tags span:hover {
-  background: #4da3ff;
-  color: #050816;
-  transform: translateY(-3px);
-  cursor: default;
+/* ==========================
+   TESTING (GREEN)
+========================== */
+
+.skill-card:nth-child(1) .skill-tags span{
+
+  background:rgba(34,197,94,.12);
+
+  border:1px solid rgba(34,197,94,.28);
+
+  color:#BBF7D0;
+
 }
+
+.skill-card:nth-child(1) .skill-tags span:hover{
+
+  background:#22C55E;
+
+  color:#04130A;
+
+}
+
+/* ==========================
+   AUTOMATION (PURPLE)
+========================== */
+
+.skill-card:nth-child(2) .skill-tags span{
+
+  background:rgba(168,85,247,.12);
+
+  border:1px solid rgba(168,85,247,.28);
+
+  color:#E9D5FF;
+
+}
+
+.skill-card:nth-child(2) .skill-tags span:hover{
+
+  background:#A855F7;
+
+  color:#14051D;
+
+}
+
+/* ==========================
+   API & DATABASE (BLUE)
+========================== */
+
+.skill-card:nth-child(3) .skill-tags span{
+
+  background:rgba(14,165,233,.12);
+
+  border:1px solid rgba(14,165,233,.28);
+
+  color:#BAE6FD;
+
+}
+
+.skill-card:nth-child(3) .skill-tags span:hover{
+
+  background:#0EA5E9;
+
+  color:#03141D;
+
+}
+
+/* ==========================
+   TOOLS (ORANGE)
+========================== */
+
+.skill-card:nth-child(4) .skill-tags span{
+
+  background:rgba(245,158,11,.12);
+
+  border:1px solid rgba(245,158,11,.28);
+
+  color:#FDE68A;
+
+}
+
+.skill-card:nth-child(4) .skill-tags span:hover{
+
+  background:#F59E0B;
+
+  color:#1A1202;
+
+}
+
+/* Hover Animation */
+
+.skill-tags span:hover{
+
+  transform:translateY(-3px) scale(1.05);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
 
 @media (max-width: 900px) {
+
   .skills-grid {
+
     grid-template-columns: 1fr;
+
+    gap: 24px;
+
   }
 
   .skill-card {
-    padding: 25px;
+
+    padding: 26px;
+
   }
 
   .skill-card h3 {
+
     font-size: 24px;
+
   }
+
 }
 
 @media (max-width: 600px) {
-  .skill-tags span {
-    font-size: 13px;
-    padding: 8px 14px;
+
+  .skills {
+
+    padding: 70px 20px;
+
   }
+
+  .skill-card {
+
+    padding: 22px;
+
+  }
+
+  .skill-card h3 {
+
+    font-size: 22px;
+
+  }
+
+  .skill-card h3 svg {
+
+    font-size: 24px;
+
+  }
+
+  .skill-tags {
+
+    gap: 10px;
+
+  }
+
+  .skill-tags span {
+
+    font-size: 13px;
+
+    padding: 8px 14px;
+
+  }
+
 }
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .skill-card,
+  .skill-card::before,
+  .skill-card h3 svg,
+  .skill-tags span {
+
+    transition: none !important;
+    animation: none !important;
+
+  }
+
+}
+
+/* ==========================================
+   PERFORMANCE
+========================================== */
+
+.skill-card {
+
+  will-change: transform, box-shadow;
+
+}
+
+.skill-card h3 svg {
+
+  will-change: transform;
+
+}
+
+.skill-tags span {
+
+  will-change: transform;
+
+}
+
+/* ==========================================
+   OPTIONAL GLASS SHINE
+========================================== */
+
+.skill-card::after{
+
+  content:"";
+
+  position:absolute;
+
+  top:-40%;
+  left:-160%;
+
+  width:65%;
+  height:180%;
+
+  background:linear-gradient(
+
+      90deg,
+
+      transparent,
+
+      rgba(255,255,255,.10),
+
+      transparent
+
+  );
+
+  transform:skewX(-25deg);
+
+  transition:left .8s ease;
+
+  pointer-events:none;
+
+}
+
+.skill-card:hover::after{
+
+  left:160%;
+
+}
+
+/* ==========================================
+   TITLE & LEVEL
+========================================== */
+
+.skill-card h3{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:25px;
+
+}
+
+.skill-title{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+}
+
+.skill-level{
+
+  padding:6px 14px;
+
+  border-radius:999px;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  letter-spacing:.4px;
+
+}
+
+/* Expert */
+
+.skill-level.expert{
+
+  background:rgba(34,197,94,.14);
+
+  color:#22C55E;
+
+  border:1px solid rgba(34,197,94,.28);
+
+}
+
+/* Advanced */
+
+.skill-level.advanced{
+
+  background:rgba(59,130,246,.14);
+
+  color:#3B82F6;
+
+  border:1px solid rgba(59,130,246,.28);
+
+}
+
+.skill-card:hover .skill-level{
+
+  transform:scale(1.05);
+
+}
+
+/* ==========================================
+   END OF FILE
+========================================== */
