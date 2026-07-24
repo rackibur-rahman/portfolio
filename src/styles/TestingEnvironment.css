@@ -1,0 +1,814 @@
+/* =========================================================
+   TESTING ENVIRONMENT
+========================================================= */
+
+.testing-environment{
+  max-width:1280px;
+  margin:auto;
+  padding:90px 20px;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.testing-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+  gap:30px;
+  margin-top:45px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.env-card{
+
+  position:relative;
+  overflow:hidden;
+
+  display:flex;
+  flex-direction:column;
+
+  padding:30px;
+
+  border-radius:24px;
+
+  background:
+  linear-gradient(
+  180deg,
+  rgba(255,255,255,.05),
+  rgba(255,255,255,.02)
+  ),
+  #111827;
+
+  border:1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:blur(18px);
+
+  transition:
+  transform .35s,
+  box-shadow .35s,
+  border-color .35s;
+
+}
+
+.env-card::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+top:0;
+
+width:100%;
+height:4px;
+
+background:linear-gradient(
+90deg,
+#4da3ff,
+#8b5cf6
+);
+
+}
+
+.env-card::after{
+
+content:"";
+
+position:absolute;
+
+top:-50%;
+left:-170%;
+
+width:70%;
+height:200%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.12),
+transparent
+);
+
+transform:skewX(-25deg);
+
+transition:left .9s;
+
+pointer-events:none;
+
+}
+
+.env-card:hover::after{
+
+left:170%;
+
+}
+
+.env-card:hover{
+
+transform:
+translateY(-10px);
+
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.env-header{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+margin-bottom:30px;
+
+}
+
+.env-header h3{
+
+margin:0;
+
+font-size:28px;
+
+font-weight:700;
+
+color:#fff;
+
+}
+
+.env-header span{
+
+display:block;
+
+margin-top:6px;
+
+font-size:14px;
+
+color:#94a3b8;
+
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.env-icon{
+
+width:68px;
+height:68px;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+border-radius:20px;
+
+font-size:30px;
+
+transition:.35s;
+
+}
+
+.env-card:hover .env-icon{
+
+transform:
+rotate(-8deg)
+scale(1.12);
+
+}
+
+.env-icon.android{
+
+background:rgba(34,197,94,.12);
+
+color:#22c55e;
+
+box-shadow:
+0 0 25px rgba(34,197,94,.25);
+
+}
+
+.env-icon.ios{
+
+background:rgba(59,130,246,.12);
+
+color:#60a5fa;
+
+box-shadow:
+0 0 25px rgba(59,130,246,.25);
+
+}
+
+.env-icon.cloud{
+
+background:rgba(168,85,247,.12);
+
+color:#c084fc;
+
+box-shadow:
+0 0 25px rgba(168,85,247,.25);
+
+}
+
+/* =========================================================
+   DEVICE GRID
+========================================================= */
+
+.device-grid{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:14px;
+
+}
+
+/* =========================================================
+   CAPSULE
+========================================================= */
+
+.device-card{
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:11px 18px;
+
+border-radius:999px;
+
+background:#151d2d;
+
+border:1px solid rgba(255,255,255,.08);
+
+color:#e5e7eb;
+
+font-size:14px;
+
+font-weight:600;
+
+cursor:pointer;
+
+overflow:hidden;
+
+transition:
+transform .35s,
+background .35s,
+border-color .35s,
+box-shadow .35s;
+
+}
+
+.device-card::before{
+
+content:"";
+
+position:absolute;
+
+left:-150%;
+top:0;
+
+width:55%;
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.18),
+transparent
+);
+
+transform:skewX(-20deg);
+
+transition:left .8s;
+
+}
+
+.device-card:hover::before{
+
+left:170%;
+
+}
+
+.device-card:hover{
+
+transform:
+translateY(-5px)
+scale(1.04);
+
+}
+
+/* =========================================================
+   DEVICE GRID
+========================================================= */
+
+.device-grid{
+
+display:flex;
+flex-wrap:wrap;
+gap:14px;
+
+}
+
+
+/* =========================================================
+   DEVICE CARD
+========================================================= */
+
+.device-card{
+
+position:relative;
+
+display:flex;
+align-items:center;
+gap:12px;
+
+padding:12px 18px;
+
+border-radius:999px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.08);
+
+color:#f8fafc;
+
+font-size:14px;
+font-weight:600;
+
+overflow:hidden;
+
+cursor:pointer;
+
+transition:
+transform .35s ease,
+background .35s ease,
+box-shadow .35s ease,
+border-color .35s ease,
+color .35s ease;
+
+}
+
+
+/* Glass Shine */
+
+.device-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-120%;
+
+width:60%;
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.25),
+transparent
+);
+
+transform:skewX(-20deg);
+
+transition:left .8s ease;
+
+}
+
+.device-card:hover::before{
+
+left:160%;
+
+}
+
+.device-card:hover{
+
+transform:
+translateY(-4px)
+scale(1.05);
+
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.device-icon{
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+width:24px;
+height:24px;
+
+font-size:18px;
+
+border-radius:0;
+
+background:none;
+
+transition:
+transform .35s ease,
+color .35s ease;
+
+}
+
+.device-card:hover .device-icon{
+
+transform:
+scale(1.15)
+rotate(-8deg);
+
+}
+
+/* =========================================================
+   ANDROID HOVER COLORS
+========================================================= */
+
+/* Oppo */
+
+.device-card.oppo:hover{
+
+background:linear-gradient(135deg,#0F9D58,#22C55E);
+
+border-color:#22c55e;
+
+color:#fff;
+
+box-shadow:
+0 12px 30px rgba(34,197,94,.35);
+
+}
+
+.device-card.oppo:hover .device-icon{
+
+color:#dcfce7;
+
+}
+
+
+/* Samsung */
+
+.device-card.samsung:hover{
+
+background:linear-gradient(135deg,#2563EB,#60A5FA);
+
+border-color:#60a5fa;
+
+color:#fff;
+
+box-shadow:
+0 12px 30px rgba(59,130,246,.35);
+
+}
+
+.device-card.samsung:hover .device-icon{
+
+color:#dbeafe;
+
+}
+
+
+/* Google Pixel */
+
+.device-card.pixel:hover{
+
+background:linear-gradient(135deg,#06B6D4,#3B82F6);
+
+border-color:#38bdf8;
+
+color:#fff;
+
+box-shadow:
+0 12px 30px rgba(6,182,212,.35);
+
+}
+
+.device-card.pixel:hover .device-icon{
+
+color:#cffafe;
+
+}
+
+
+/* Redmi */
+
+.device-card.redmi:hover{
+
+background:linear-gradient(135deg,#EA580C,#FB923C);
+
+border-color:#fb923c;
+
+color:#fff;
+
+box-shadow:
+0 12px 30px rgba(251,146,60,.35);
+
+}
+
+.device-card.redmi:hover .device-icon{
+
+color:#ffedd5;
+
+}
+
+
+/* Nokia */
+
+.device-card.nokia:hover{
+
+background:linear-gradient(135deg,#4338CA,#8B5CF6);
+
+border-color:#8b5cf6;
+
+color:#fff;
+
+box-shadow:
+0 12px 30px rgba(139,92,246,.35);
+
+}
+
+.device-card.nokia:hover .device-icon{
+
+color:#ede9fe;
+
+}
+
+
+/* =========================================================
+   APPLE DEVICES
+========================================================= */
+
+.device-card.iphone:hover{
+
+background:linear-gradient(135deg,#4B5563,#D1D5DB);
+
+border-color:#d1d5db;
+
+color:#fff;
+
+box-shadow:
+0 12px 30px rgba(255,255,255,.20);
+
+}
+
+.device-card.iphone:hover .device-icon{
+
+color:#fff;
+
+}
+
+/* =========================================================
+   CLOUD PLATFORM HOVER
+========================================================= */
+
+.device-card.browserstack:hover{
+
+background:linear-gradient(135deg,#FF7A18,#FFB347);
+
+border-color:#ffb347;
+
+color:#fff;
+
+box-shadow:
+0 12px 30px rgba(255,122,24,.35);
+
+}
+
+.device-card.browserstack:hover .device-icon{
+
+transform:
+scale(1.12)
+rotate(-8deg);
+
+}
+
+.device-card.browserstack:hover .device-icon img{
+
+filter:
+brightness(0)
+invert(1);
+
+}
+
+
+/* ========================================================= */
+
+.device-card.lambda:hover{
+
+background:linear-gradient(135deg,#7C3AED,#8B5CF6);
+
+border-color:#a78bfa;
+
+color:#fff;
+
+box-shadow:
+0 12px 30px rgba(139,92,246,.35);
+
+}
+
+.device-card.lambda:hover .device-icon{
+
+transform:
+scale(1.12)
+rotate(-8deg);
+
+}
+
+.device-card.lambda:hover .device-icon img{
+
+filter:
+brightness(0)
+invert(1);
+
+}
+
+
+/* =========================================================
+   COMPANY CARD GLOW
+========================================================= */
+
+.env-card.android:hover{
+
+border-color:rgba(34,197,94,.28);
+
+box-shadow:
+0 20px 45px rgba(34,197,94,.18);
+
+}
+
+.env-card.ios:hover{
+
+border-color:rgba(59,130,246,.28);
+
+box-shadow:
+0 20px 45px rgba(59,130,246,.18);
+
+}
+
+.env-card.cloud:hover{
+
+border-color:rgba(168,85,247,.28);
+
+box-shadow:
+0 20px 45px rgba(168,85,247,.18);
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.device-icon img{
+
+width:18px;
+
+height:18px;
+
+object-fit:contain;
+
+display:block;
+
+transition:
+transform .35s ease,
+filter .35s ease;
+
+}
+
+.device-card:hover .device-icon img{
+
+transform:scale(1.12);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:900px){
+
+.testing-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.testing-environment{
+
+padding:70px 20px;
+
+}
+
+.env-card{
+
+padding:24px;
+
+}
+
+.env-header h3{
+
+font-size:22px;
+
+}
+
+.device-grid{
+
+gap:10px;
+
+}
+
+.device-card{
+
+font-size:13px;
+
+padding:10px 16px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.device-card{
+
+font-size:12px;
+
+padding:9px 14px;
+
+gap:8px;
+
+}
+
+.device-icon{
+
+font-size:16px;
+
+width:20px;
+
+height:20px;
+
+}
+
+.device-icon img{
+
+width:16px;
+
+height:16px;
+
+}
+
+}
+
+
+/* =========================================================
+   PERFORMANCE
+========================================================= */
+
+.env-card,
+.device-card{
+
+will-change:
+transform,
+box-shadow;
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+.env-card,
+.device-card{
+
+animation:none !important;
+
+transition:none !important;
+
+}
+
+}

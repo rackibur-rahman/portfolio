@@ -491,33 +491,109 @@
   color: #ffffff;
 }
 
-.client-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+/* ====================================
+   Enterprise Client Logos
+==================================== */
+
+.client-logos{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(95px,1fr));
+
+gap:18px;
+
+margin-top:22px;
+
 }
 
-.client-pill {
-  padding: 8px 15px;
+.client-logo{
 
-  border-radius: 999px;
+width:100%;
 
-  font-size: 13px;
-  font-weight: 600;
+height:100%;
 
-  transition: all .3s ease;
+max-width:60px;
 
-  background: rgba(77,163,255,.10);
+max-height:60px;
 
-  color: #dbeafe;
+object-fit:contain;
 
-  border: 1px solid rgba(77,163,255,.22);
+object-position:center;
+
+transition:.35s;
+
 }
 
-.client-pill:hover {
-  transform: translateY(-3px);
-  background: #4da3ff;
-  color: #050816;
+/* Logo Card */
+
+.client-logo-card{
+
+width:72px;
+
+height:72px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:10px;
+
+background:#fff;
+
+overflow:hidden;
+
+}
+
+/* Logo */
+
+.client-logo-card:hover{
+  transform:
+    translateY(-5px)
+    scale(1.1);
+
+  border-color:#60a5fa;
+
+  box-shadow:
+    0 0 20px rgba(77,163,255,.35),
+    0 12px 30px rgba(77,163,255,.25);
+
+  background:white;
+}
+
+.client-logo-card:hover .client-logo{
+  transform:scale(1.15);
+}
+
+/* Hover */
+
+.client-logo-card:hover{
+
+transform:
+translateY(-6px)
+scale(1.04);
+
+background:#ffffff;
+
+border-color:#4da3ff;
+
+box-shadow:
+0 18px 38px rgba(77,163,255,.30);
+
+}
+
+.client-logo-card:hover .client-logo{
+
+transform:scale(1.15);
+
+filter:
+drop-shadow(0 4px 12px rgba(77,163,255,.35));
+
 }
 
 /* ===========================
@@ -748,14 +824,6 @@
     font-size: 10px;
   }
 
-  .client-badges {
-    gap: 8px;
-  }
-
-  .client-pill {
-    font-size: 12px;
-    padding: 7px 12px;
-  }
 
 }
 
@@ -768,6 +836,22 @@
   .status-badge {
     font-size: 11px;
     padding: 6px 11px;
+  }
+
+  .client-logos{
+
+  grid-template-columns:
+  repeat(3,1fr);
+
+  gap:12px;
+
+  }
+
+
+  .client-logo{
+
+  max-height:34px;
+
   }
 
 }

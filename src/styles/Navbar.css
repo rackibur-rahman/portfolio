@@ -67,21 +67,230 @@
 }
 
 
-.nav-links a {
+.nav-links a{
 
-  color: white;
+  position:relative;
 
-  text-decoration: none;
+  display:inline-block;
 
-  transition: 0.3s;
+  color:#ffffff;
 
-  font-weight: 500;
+  text-decoration:none;
+
+  font-weight:500;
+
+  padding:6px 2px;
+
+  transition:
+    color .35s ease,
+    transform .35s ease;
+
 }
 
 
-.nav-links a:hover {
-  color: #4da3ff;
+/* ==========================================
+   MENU HOVER TEXT COLORS
+========================================== */
+
+/* Home */
+
+.nav-links li:nth-child(1) a:hover{
+  color:#38bdf8;
+  transform:translateY(-2px);
 }
+
+/* About */
+
+.nav-links li:nth-child(2) a:hover{
+  color:#22d3ee;
+  transform:translateY(-2px);
+}
+
+/* Skills */
+
+.nav-links li:nth-child(3) a:hover{
+  color:#4ade80;
+  transform:translateY(-2px);
+}
+
+/* Experience */
+
+.nav-links li:nth-child(4) a:hover{
+  color:#fb923c;
+  transform:translateY(-2px);
+}
+
+/* Projects */
+
+.nav-links li:nth-child(5) a:hover{
+  color:#c084fc;
+  transform:translateY(-2px);
+}
+
+/* Contact */
+
+.nav-links li:nth-child(6) a:hover{
+  color:#fb7185;
+  transform:translateY(-2px);
+}
+
+
+/* ==========================================
+   Premium Animated Underline
+========================================== */
+
+.nav-links a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:50%;
+  bottom:-8px;
+
+  width:0;
+  height:3px;
+
+  border-radius:999px;
+
+  transition:
+      width .35s ease,
+      left .35s ease,
+      box-shadow .35s ease;
+
+}
+
+.nav-links a:hover::after{
+
+ overflow:hidden;
+
+  width:100%;
+
+  left:0;
+
+  box-shadow:
+      0 0 10px rgba(59,130,246,.45),
+      0 0 18px rgba(139,92,246,.30);
+
+}
+
+/* ===================================================
+   MENU SPECIFIC UNDERLINE COLORS
+=================================================== */
+
+/* Home */
+
+.nav-links li:nth-child(1) a::after{
+
+  background:linear-gradient(
+    90deg,
+    #38bdf8,
+    #2563eb
+  );
+
+}
+
+.nav-links li:nth-child(1) a:hover::after{
+
+  box-shadow:0 0 12px rgba(59,130,246,.45);
+
+}
+
+
+/* About */
+
+.nav-links li:nth-child(2) a::after{
+
+  background:linear-gradient(
+    90deg,
+    #06b6d4,
+    #22d3ee
+  );
+
+}
+
+.nav-links li:nth-child(2) a:hover::after{
+
+  box-shadow:0 0 12px rgba(34,211,238,.45);
+
+}
+
+
+/* Skills */
+
+.nav-links li:nth-child(3) a::after{
+
+  background:linear-gradient(
+    90deg,
+    #22c55e,
+    #4ade80
+  );
+
+}
+
+.nav-links li:nth-child(3) a:hover::after{
+
+  box-shadow:0 0 12px rgba(34,197,94,.45);
+
+}
+
+
+/* Experience */
+
+.nav-links li:nth-child(4) a::after{
+
+  background:linear-gradient(
+    90deg,
+    #f59e0b,
+    #facc15
+  );
+
+}
+
+.nav-links li:nth-child(4) a:hover::after{
+
+  box-shadow:0 0 12px rgba(245,158,11,.45);
+
+}
+
+
+/* Projects */
+
+.nav-links li:nth-child(5) a::after{
+
+  background:linear-gradient(
+    90deg,
+    #8b5cf6,
+    #c084fc
+  );
+
+}
+
+.nav-links li:nth-child(5) a:hover::after{
+
+  box-shadow:0 0 12px rgba(139,92,246,.45);
+
+}
+
+
+/* Contact */
+
+.nav-links li:nth-child(6) a::after{
+
+  background:linear-gradient(
+    90deg,
+    #ec4899,
+    #fb7185
+  );
+
+}
+
+.nav-links li:nth-child(6) a:hover::after{
+
+  box-shadow:0 0 12px rgba(236,72,153,.45);
+
+}
+
 
 
 /* Resume Button */

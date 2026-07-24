@@ -120,14 +120,18 @@ function Experience() {
       ],
 
       clients: [
-        "ExxonMobil",
-        "Google",
-        "JPMorgan Chase",
-        "AMMEX",
-        "Disney",
-        "Kraft",
-        "Levi's",
-        "Target",
+        { name: "Google", logo: "/logos/google.png" },
+        { name: "ExxonMobil", logo: "/logos/exxonmobil.png" },
+        { name: "JPMorgan Chase", logo: "/logos/jpmorgan.png" },
+        { name: "AMMEX", logo: "/logos/ammex.png" },
+        { name: "Disney", logo: "/logos/disney.png" },
+        { name: "Kraft", logo: "/logos/kraft.png" },
+        { name: "Levi's", logo: "/logos/levis.png" },
+        { name: "Target", logo: "/logos/target.png" },
+        { name: "Coca-Cola", logo: "/logos/coke.png" },
+        { name: "FedEx", logo: "/logos/fedex.png" },
+        { name: "Nestlé", logo: "/logos/nestle.png" },
+        { name: "Pfizer", logo: "/logos/pfizer.png" },
       ],
     },
 
@@ -266,19 +270,26 @@ function Experience() {
                 <div className="client-section">
 
                   <h5>
-                    🌍 Selected Enterprise Clients
+                    🌍 Enterprise Clients Worked With
                   </h5>
 
-                  <div className="client-badges">
+                  <div className="client-logos">
 
                     {job.clients.map((client, i) => (
 
-                      <span
-                        className="client-pill"
+                      <div
+                        className="client-logo-card"
                         key={i}
+                        title={client.name}
                       >
-                        {client}
-                      </span>
+
+                        <img
+                          src={client.logo}
+                          alt={client.name}
+                          className="client-logo"
+                        />
+
+                      </div>
 
                     ))}
 

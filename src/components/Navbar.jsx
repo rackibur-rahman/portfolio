@@ -7,15 +7,15 @@ function Navbar() {
       <div className="logo-container">
 
         <div className="logo">
-          <a href="#home">Rackibur QA Engineer.</a>
+          <a href="#home">Rackibur - QA Specialist.</a>
         </div>
 
         <div className="brand-tagline">
-          Breaking apps before users do 🐞
+          🛡️ Quality isn't a phase, it's a mindset.
         </div>
 
         <div className="brand-subtag">
-          Quality 🛡️ isn't a phase, it's a mindset.
+          Breaking apps before users do 🐞
         </div>
 
       </div>
