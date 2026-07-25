@@ -438,9 +438,6 @@ function Projects() {
               <span className="role">
                 {project.role}
               </span>
-
-            </div>
-
             <span
               className="status-badge"
               style={{
@@ -451,6 +448,8 @@ function Projects() {
             >
               ● {project.status}
             </span>
+
+            </div>
 
           </div>
 

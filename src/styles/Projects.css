@@ -15,7 +15,7 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   gap: 32px;
 }
 
@@ -143,25 +143,20 @@ left:160%;
 ========================================================= */
 
 .project-header{
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+    flex-wrap:wrap;
 
-display:flex;
-
-align-items:center;
-
-gap:25px;
-
-margin-bottom:20px;
-
-position:relative;
-
-z-index:2;
-
+    margin-bottom:20px;
+    position:relative;
+    z-index:2;
 }
 
+
 .project-info{
-
-flex:1;
-
+    flex:1;
+    min-width:0;
 }
 
 /* =========================================================
@@ -170,9 +165,9 @@ flex:1;
 
 .project-logo{
 
-width:74px;
+width:64px;
 
-height:74px;
+height:64px;
 
 border-radius:20px;
 
@@ -214,7 +209,7 @@ margin:0;
 
 color:white;
 
-font-size:28px;
+font-size:24px;
 
 font-weight:700;
 
@@ -248,9 +243,9 @@ z-index:2;
 
 color:#cbd5e1;
 
-line-height:1.8;
+line-height:1.65;
 
-font-size:15px;
+font-size:14px;
 
 margin:20px 0 24px;
 
@@ -304,7 +299,7 @@ margin:18px 0;
 
 .platform-badges span{
 
-padding:8px 16px;
+padding:6px 12px;
 
 border-radius:999px;
 
@@ -314,7 +309,7 @@ border:1px solid rgba(77,163,255,.25);
 
 color:#dbeafe;
 
-font-size:13px;
+font-size:12px;
 
 font-weight:600;
 
@@ -352,11 +347,11 @@ transform:translateY(-2px);
   align-items:center;
   gap:8px;
 
-  padding:8px 14px;
+  padding:7px 12px;
 
   border-radius:999px;
 
-  font-size:13px;
+  font-size:12px;
   font-weight:600;
   line-height:1;
 
@@ -718,9 +713,9 @@ margin-top:28px;
 
 .project-links a{
 
-width:48px;
+width:42px;
 
-height:48px;
+height:42px;
 
 display:flex;
 
@@ -736,7 +731,7 @@ border:1px solid rgba(255,255,255,.08);
 
 color:#ffffff;
 
-font-size:20px;
+font-size:18px;
 
 text-decoration:none;
 
@@ -777,28 +772,22 @@ position:relative;
 .project-card .status-badge{
 
 display:inline-flex;
-
 align-items:center;
-
 gap:6px;
+
+margin-top:10px;
 
 padding:7px 12px;
 
 border-radius:999px;
 
 font-size:12px;
-
 font-weight:700;
 
+width:fit-content;
+
 backdrop-filter:blur(10px);
-
 -webkit-backdrop-filter:blur(10px);
-
-margin-left:auto;
-
-white-space:nowrap;
-
-flex-shrink:0;
 
 }
 
@@ -877,8 +866,28 @@ color:#E2E8F0;
 
 grid-template-columns:1fr;
 
-gap:28px;
+gap:20px;
 
+}
+
+}
+
+@media (max-width:600px){
+
+.project-info{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.project-info .role{
+    display:block;
+    margin-top:4px;
+    margin-bottom:10px;
+}
+
+.project-info .status-badge{
+    margin-top:0;
 }
 
 }
@@ -887,13 +896,15 @@ gap:28px;
 
 .projects{
 
+grid-template-columns:1fr;
+
 padding:70px 20px;
 
 }
 
 .project-card{
 
-padding:26px;
+padding:22px;
 
 }
 
@@ -933,8 +944,8 @@ padding:26px;
 
 .project-logo{
 
-width:82px;
-height:82px;
+width:72px;
+height:72px;
 
 }
 
