@@ -386,6 +386,58 @@
 
   }
 
+  .skill-card h3{
+
+    gap:10px;
+
+    align-items:center;
+
+}
+
+.skill-title{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+.skill-level{
+
+    flex-shrink:0;
+
+    white-space:nowrap;
+
+    font-size:11px;
+
+    padding:6px 10px;
+
+}
+
+}
+
+@media (max-width: 420px){
+
+  .skill-card h3{
+
+      gap:10px;
+
+  }
+
+  .skill-title span{
+
+      font-size:14px;
+
+  }
+
+  .skill-level{
+
+      font-size:8px;
+
+      padding:5px 8px;
+
+  }
+
 }
 
 /* ==========================================
@@ -477,10 +529,10 @@
 .skill-card h3{
 
   display:flex;
-
   justify-content:space-between;
+  align-items:flex-start;
 
-  align-items:center;
+  gap:12px;
 
   margin-bottom:25px;
 
@@ -489,23 +541,25 @@
 .skill-title{
 
   display:flex;
-
   align-items:center;
-
   gap:12px;
+
+  flex:1;
+  min-width:0;
 
 }
 
 .skill-level{
 
-  padding:6px 14px;
+  flex-shrink:0;
+  white-space:nowrap;
+
+  padding:5px 10px;
 
   border-radius:999px;
 
   font-size:12px;
-
   font-weight:700;
-
   letter-spacing:.4px;
 
 }

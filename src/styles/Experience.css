@@ -529,25 +529,23 @@ transition:.35s;
 /* Logo Card */
 
 .client-logo-card{
+  width:100%;
+  max-width:72px;
+  aspect-ratio:1;
 
-width:72px;
+  margin:0 auto;
 
-height:72px;
+  border-radius:50%;
 
-border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-display:flex;
+  padding:10px;
+  background:#fff;
+  overflow:hidden;
 
-align-items:center;
-
-justify-content:center;
-
-padding:10px;
-
-background:#fff;
-
-overflow:hidden;
-
+  box-sizing:border-box;
 }
 
 /* Logo */
@@ -636,6 +634,9 @@ drop-shadow(0 4px 12px rgba(77,163,255,.35));
   .timeline-content {
     background: #111827;
     border-radius: 18px;
+
+    overflow:hidden;
+    box-sizing:border-box;
 
     padding: 32px 32px 32px 38px;
 
@@ -853,5 +854,15 @@ drop-shadow(0 4px 12px rgba(77,163,255,.35));
   max-height:34px;
 
   }
+
+  .client-logos{
+
+  grid-template-columns:repeat(3,minmax(0,1fr));
+
+  gap:10px;
+
+  justify-items:center;
+
+}
 
 }
