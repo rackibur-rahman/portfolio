@@ -6,8 +6,16 @@ function Navbar() {
 
       <div className="logo-container">
 
-        <div className="logo">
-          <a href="#home">Rackibur - QA Specialist.</a>
+        <div className="logo-brand">
+          <img
+            src="/favicon.png"
+            alt="Rackibur QA Logo"
+            className="logo-icon"
+          />
+
+          <h1 className="logo-text">
+            QA Specialist.
+          </h1>
         </div>
 
         <div className="brand-tagline">

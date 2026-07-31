@@ -301,7 +301,7 @@
 
   color: #050816;
 
-  background: #4da3ff;
+  background: #a855f7;
 
   padding: 10px 22px;
 
@@ -315,10 +315,35 @@
 
 .resume-btn:hover {
 
-  background: white;
+  background: #e4d2cd;
 
-  color: #050816;
+  color: #a855f7;
 
+}
+
+
+/* Logo wrapper */
+.logo-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+/* Icon */
+.logo-icon{
+  width:44px;
+  height:44px;
+  object-fit:contain;
+  border-radius:50%;
+  display:block;
+}
+
+/* Text */
+.logo-text{
+  margin:0;
+  color:#a855f7; /* purple */
+  font-weight:700;
+  line-height:1.1;
 }
 
 
@@ -352,6 +377,19 @@
 
     gap: 18px;
 
+  }
+
+}
+
+@media (max-width:600px){
+
+  .logo-icon{
+    width:36px;
+    height:36px;
+  }
+
+  .logo-text{
+    font-size:28px; /* প্রয়োজন হলে কম/বেশি করো */
   }
 
 }

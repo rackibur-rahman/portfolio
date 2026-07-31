@@ -4,17 +4,20 @@ html {
 
 body{
 
-background:#050816;
+  background: #070012;
 
-background-image:
-radial-gradient(circle at 20% 20%,rgba(77,163,255,.06),transparent 28%),
-radial-gradient(circle at 80% 60%,rgba(77,163,255,.05),transparent 30%);
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(168,85,247,.18), transparent 30%),
+    radial-gradient(circle at 80% 20%, rgba(192,132,252,.14), transparent 28%),
+    radial-gradient(circle at 50% 80%, rgba(139,92,246,.12), transparent 35%);
+
+  color: white;
 
 }
 
 .app {
   min-height: 100vh;
-  background: #050816;
+  background: #070012;
   color: white;
   font-family: "Inter", Arial, sans-serif;
   padding: 20px 50px;
@@ -37,35 +40,33 @@ radial-gradient(circle at 80% 60%,rgba(77,163,255,.05),transparent 30%);
   margin-top: 30px;
   padding: 14px 35px;
 
-  background: #4da3ff;
-  color: #050816;
+  background: var(--primary);
+  color: #120018;
 
   border-radius: 30px;
 
   text-decoration: none;
   font-weight: 700;
 
-  border: 2px solid #4da3ff;
+  border: 2px solid var(--primary);
 
   transition: all 0.3s ease;
 }
 
 
 .btn:hover {
-  background: white;
-  color: #050816;
-  border-color: white;
-  transform: translateY(-4px);
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+  color: #120018;
 }
 
 .btn.secondary {
-  background: transparent;
-  border: 2px solid #4da3ff;
-  color: #4da3ff;
+  border: 2px solid var(--primary);
+  color: var(--primary);
 }
 
 .btn.secondary:hover {
-  background: #4da3ff;
+  background: #FF5722;
   color: white;
 }
 
@@ -80,7 +81,7 @@ radial-gradient(circle at 80% 60%,rgba(77,163,255,.05),transparent 30%);
   text-align: center;
   font-size: 40px;
   margin-bottom: 40px;
-  color: #4da3ff;
+  color: var(--primary);
 }
 
 
@@ -161,13 +162,17 @@ radial-gradient(circle at 80% 60%,rgba(77,163,255,.05),transparent 30%);
 
 :root{
 
---glass-bg:rgba(17,24,39,.55);
+  --glass-bg: rgba(20, 10, 35, .58);
+  --glass-border: rgba(192,132,252,.16);
+  --glass-shadow: 0 10px 35px rgba(0,0,0,.45);
 
---glass-border:rgba(255,255,255,.08);
+  /* Main neon purple */
+  --primary: #c084fc;
+  --primary-dark: #a855f7;
+  --primary-light: #e9d5ff;
 
---glass-shadow:0 10px 35px rgba(0,0,0,.35);
-
---blue-glow:rgba(77,163,255,.25);
+  /* Glow */
+  --purple-glow: rgba(192,132,252,.35);
 
 }
 
@@ -225,13 +230,13 @@ position:relative;
 .contact-container:hover,
 .cta-card:hover{
 
-transform:translateY(-10px);
+  transform: translateY(-10px);
 
-border-color:#4da3ff!important;
+  border-color: var(--primary) !important;
 
-box-shadow:
-0 20px 45px rgba(0,0,0,.45),
-0 0 35px var(--blue-glow);
+  box-shadow:
+    0 20px 45px rgba(0,0,0,.45),
+    0 0 35px var(--purple-glow);
 
 }
 
@@ -263,7 +268,7 @@ height:3px;
 background:linear-gradient(
 90deg,
 transparent,
-#4da3ff,
+var(--primary),
 transparent
 );
 
@@ -308,9 +313,8 @@ opacity:.85;
 .platform-badges span,
 .case-tags label{
 
-background:rgba(77,163,255,.10)!important;
-
-border:1px solid rgba(77,163,255,.15);
+  background: rgba(168,85,247,.12) !important;
+  border: 1px solid rgba(192,132,252,.22);
 
 }
 
@@ -318,9 +322,8 @@ border:1px solid rgba(77,163,255,.15);
 .platform-badges span:hover,
 .case-tags label:hover{
 
-background:#4da3ff!important;
-
-color:#050816;
+  background: var(--primary) !important;
+  color: #120018;
 
 }
 
@@ -351,12 +354,11 @@ transform:scale(1.12) rotate(-2deg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4da3ff;
-  border-radius: 50px;
+  background: var(--primary);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #70b7ff;
+  background: var(--primary-light);
 }
 
 /* ==========================================
@@ -392,7 +394,7 @@ body::before {
   width: 420px;
   height: 420px;
 
-  background: #4da3ff;
+  background: #a855f7;
 
   top: -120px;
   left: -120px;
@@ -404,7 +406,7 @@ body::after {
   width: 500px;
   height: 500px;
 
-  background: #2563eb;
+  background: #7c3aed;
 
   bottom: -180px;
   right: -180px;
