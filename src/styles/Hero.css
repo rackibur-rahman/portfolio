@@ -20,7 +20,7 @@
 }
 
 .hero h1 {
-  color: #d20a7b;
+  color: #ffffff;
   font-size: 64px;
   line-height: 1.1;
   margin-bottom: 15px;
@@ -32,7 +32,7 @@ font-size:36px;
 
 font-weight:700;
 
-color:#a855f7;
+color:#FF5722;
 
 margin:15px 0;
 
@@ -42,7 +42,7 @@ min-height:50px;
 
 .typing-title span{
 
-border-right:3px solid #a855f7;
+border-right:3px solid #FF5722;
 
 padding-right:5px;
 
@@ -54,7 +54,7 @@ animation:cursorBlink .8s infinite;
 
 0%,50%{
 
-border-color:#a855f7;
+border-color:#FF5722;
 
 }
 
@@ -68,13 +68,13 @@ border-color:transparent;
 
 .tagline {
   font-size: 22px;
-  color: #FF5722;
+  color: #ffffff;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
 .description {
-  color: #00BCD4;
+  color: #ffffff;
   font-size: 18px;
   line-height: 1.8;
   max-width: 650px;
@@ -109,7 +109,7 @@ border-color:transparent;
 }
 
 .connect-text{
-  color:#f5f7f7;
+  color:#a6a8a8;
   font-size:15px;
   margin:25px 0 12px;
   font-weight:500;
@@ -123,7 +123,7 @@ border-color:transparent;
 }
 
 .social-links a {
-  color: #f3df99;
+  color: #ffffff;
   font-size: 28px;
   transition: 0.3s;
 }
