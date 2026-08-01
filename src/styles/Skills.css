@@ -597,3 +597,13 @@
 /* ==========================================
    END OF FILE
 ========================================== */
+
+
+.skills .section-title h2{
+  color:#a855f7 !important;
+}
+
+.skills .section-title p{
+  color:#FF5722;
+  opacity:1;
+}

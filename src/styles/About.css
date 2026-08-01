@@ -2,6 +2,7 @@
   max-width: 1200px;
   margin: auto;
   padding: 80px 20px;
+  color: #FF5722
 }
 
 .section-title {
@@ -11,11 +12,11 @@
 
 .section-title h2 {
   font-size: 40px;
-  color: #4da3ff;
+  color: #a855f7;
 }
 
 .section-title p {
-  color: #999;
+  color: #FF5722;
   margin-top: 10px;
 }
 
@@ -32,7 +33,7 @@
 }
 
 .about-text p {
-  color: #bdbdbd;
+  color: #0290A7;
   line-height: 1.9;
   margin-bottom: 18px;
   font-size: 17px;
@@ -54,16 +55,16 @@
 
 .about-card:hover {
   transform: translateY(-5px);
-  border-color: #4da3ff;
+  border-color: #a855f7;
 }
 
 .about-card h3 {
-  color: #4da3ff;
+  color: #a855f7;
   font-size: 28px;
 }
 
 .about-card span {
-  color: #cfcfcf;
+  color: #f78181;
 }
 
 @media (max-width: 900px) {

@@ -134,9 +134,9 @@ border-color:transparent;
 }
 
 .btn:hover {
-  background: #e4d2cd;
-  color: #a855f7;
-  border-color: #e4d2cd;
+  background: #ffffff;
+  color: #FF5722;
+  border-color: #FF5722;
   transform: translateY(-4px);
 }
 

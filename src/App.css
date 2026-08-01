@@ -167,7 +167,7 @@ body{
   --glass-shadow: 0 10px 35px rgba(0,0,0,.45);
 
   /* Main neon purple */
-  --primary: #c084fc;
+  --primary: #d946ef;
   --primary-dark: #a855f7;
   --primary-light: #e9d5ff;
 
@@ -485,4 +485,35 @@ mask-image:radial-gradient(circle at center,black 55%,transparent 100%);
 
 opacity:.45;
 
+}
+
+
+
+/* ==========================================
+   PURPLE NEON SCROLLBAR
+========================================== */
+
+/* Chrome, Edge, Opera, Samsung Internet */
+::-webkit-scrollbar{
+  width:12px;
+}
+
+::-webkit-scrollbar-track{
+  background:#14081f;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#a855f7;
+  border-radius:999px;
+  border:2px solid #14081f;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:#FF5722;
+}
+
+/* Firefox */
+*{
+  scrollbar-width:auto;
+  scrollbar-color:#a855f7 #14081f;
 }

@@ -23,7 +23,7 @@ box-shadow:0 15px 35px rgba(77,163,255,.15);
 
 .cta-card h2{
 
-color:white;
+color:#a855f7;
 
 font-size:40px;
 
@@ -81,7 +81,7 @@ transition:.3s;
 
 .primary{
 
-background:#4da3ff;
+background:#a855f7;
 
 color:#050816;
 
@@ -97,7 +97,7 @@ transform:translateY(-4px);
 
 .secondary{
 
-border:2px solid #4da3ff;
+border:2px solid #a855f7;
 
 color:white;
 
@@ -105,7 +105,7 @@ color:white;
 
 .secondary:hover{
 
-background:#4da3ff;
+background:#a855f7;
 
 color:#050816;
 

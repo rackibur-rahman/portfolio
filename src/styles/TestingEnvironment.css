@@ -68,7 +68,7 @@ height:4px;
 
 background:linear-gradient(
 90deg,
-#4da3ff,
+#a855f7,
 #8b5cf6
 );
 
@@ -811,4 +811,13 @@ transition:none !important;
 
 }
 
+}
+
+.testing-environment .section-title h2{
+  color:#a855f7 !important;
+}
+
+.testing-environment .section-title p{
+  color:#FF5722;
+  opacity:1;
 }

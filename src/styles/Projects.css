@@ -76,9 +76,9 @@ height:4px;
 
 background:linear-gradient(
 90deg,
-#4da3ff,
-#60a5fa,
-#8b5cf6
+#a855f7,
+#ba77f9,
+#a242fb
 );
 
 }
@@ -192,7 +192,7 @@ transform:
 scale(1.08)
 rotate(-4deg);
 
-border-color:#4da3ff;
+border-color:#a855f7;
 
 box-shadow:
 0 15px 28px rgba(77,163,255,.20);
@@ -227,7 +227,7 @@ font-size:14px;
 
 font-weight:600;
 
-color:#60a5fa;
+color:#FF5722;
 
 }
 
@@ -319,7 +319,7 @@ transition:.3s;
 
 .platform-badges span:hover{
 
-background:#4da3ff;
+background:#a855f7;
 
 color:#050816;
 
@@ -745,7 +745,7 @@ backdrop-filter:blur(12px);
 
 .project-links a:hover{
 
-background:#4da3ff;
+background:#a855f7;
 
 color:#050816;
 
@@ -846,7 +846,7 @@ transition:all .35s ease;
 
 .project-card:hover h3{
 
-color:#60A5FA;
+color:#a855f7;
 
 }
 
@@ -1100,3 +1100,13 @@ transform;
 /* =========================================================
    END OF FILE
 ========================================================= */
+
+
+.projects .section-title h2{
+  color:#a855f7 !important;
+}
+
+.projects .section-title p{
+  color:#FF5722;
+  opacity:1;
+}
