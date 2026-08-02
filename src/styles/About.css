@@ -30,13 +30,15 @@
 .about-text h3 {
   font-size: 32px;
   margin-bottom: 20px;
+  font-family: 'Quantico', sans-serif;
 }
 
 .about-text p {
-  color: #0290A7;
+  color: #ffffff;
   line-height: 1.9;
   margin-bottom: 18px;
   font-size: 17px;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 .about-cards {
@@ -55,16 +57,17 @@
 
 .about-card:hover {
   transform: translateY(-5px);
-  border-color: #a855f7;
+  border-color: var(--primary);
 }
 
 .about-card h3 {
   color: #a855f7;
-  font-size: 28px;
+  font-size: 34px;
 }
 
 .about-card span {
-  color: #f78181;
+  color: #ffffff;
+  font-size: 15px;
 }
 
 @media (max-width: 900px) {

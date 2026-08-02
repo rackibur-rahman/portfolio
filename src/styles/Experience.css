@@ -672,7 +672,11 @@ drop-shadow(0 4px 12px rgba(77,163,255,.35));
    Designation Color
 =========================== */
 
-.timeline-content.nanosoft .job-title{
+.timeline-content.nanosoft .job-title.lead{
+  color:#fbbf24;
+}
+
+.timeline-content.nanosoft .job-title.sqa{
   color:#60a5fa;
 }
 

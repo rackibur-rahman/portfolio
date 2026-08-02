@@ -10,6 +10,7 @@
 }
 
 .hero-text {
+  font-family: 'Quantico', sans-serif;
   flex: 1;
 }
 
@@ -23,7 +24,8 @@
   color: #ffffff;
   font-size: 64px;
   line-height: 1.1;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-family: 'Quantico', sans-serif;
 }
 
 .hero h2{
@@ -111,7 +113,7 @@ border-color:transparent;
 .connect-text{
   color:#a6a8a8;
   font-size:15px;
-  margin:25px 0 12px;
+  margin:25px 5px 12px;
   font-weight:500;
   letter-spacing:.5px;
 }
@@ -119,7 +121,7 @@ border-color:transparent;
 .social-links {
   display: flex;
   gap: 25px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .social-links a {
