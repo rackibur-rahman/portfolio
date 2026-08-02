@@ -600,11 +600,16 @@ rotate(-8deg);
 }
 
 .device-card.browserstack:hover .device-icon img{
+  opacity:1;
+  visibility:visible;
 
-filter:
-brightness(0)
-invert(1);
+  transform:scale(1.15);
 
+  /* logo clear thakbe */
+  filter:
+    brightness(1.15)
+    contrast(1.15)
+    drop-shadow(0 0 4px rgba(255,255,255,.45));
 }
 
 
@@ -632,11 +637,15 @@ rotate(-8deg);
 }
 
 .device-card.lambda:hover .device-icon img{
+  opacity:1;
+  visibility:visible;
 
-filter:
-brightness(0)
-invert(1);
+  transform:scale(1.15);
 
+  filter:
+    brightness(1.12)
+    contrast(1.12)
+    drop-shadow(0 0 4px rgba(255,255,255,.35));
 }
 
 
@@ -689,6 +698,9 @@ display:block;
 transition:
 transform .35s ease,
 filter .35s ease;
+
+opacity:1;
+visibility:visible;
 
 }
 
