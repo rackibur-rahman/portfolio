@@ -19,11 +19,11 @@ function Navbar() {
         </div>
 
         <div className="brand-tagline">
-          🛡️ Quality isn't a phase, it's a mindset.
+          🛡️ Quality Engineered. Confidence Delivered.
         </div>
 
         <div className="brand-subtag">
-          Breaking apps before users do 🐞
+          Every release leaves my name on it ⭐
         </div>
 
       </div>
