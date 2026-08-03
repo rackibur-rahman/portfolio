@@ -435,9 +435,14 @@ function Projects() {
 
               <h3>{project.name}</h3>
 
-              <span className="role">
+              <span
+                className={`role ${
+                  project.role.includes("Lead") ? "role-lead" : "role-sqa"
+                }`}
+              >
                 {project.role}
               </span>
+              
             <span
               className="status-badge"
               style={{

@@ -8,16 +8,19 @@
 .section-title {
   text-align: center;
   margin-bottom: 50px;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 .section-title h2 {
   font-size: 40px;
   color: #a855f7;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 .section-title p {
   color: #FF5722;
   margin-top: 10px;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 .about-container {
@@ -25,6 +28,7 @@
   grid-template-columns: 2fr 1fr;
   gap: 50px;
   align-items: center;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 .about-text h3 {
@@ -44,6 +48,7 @@
 .about-cards {
   display: grid;
   gap: 20px;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 .about-card {
