@@ -5,7 +5,7 @@ function TechStack() {
     {
       name: "Jira",
       logo: "/tech/jira.png",
-      badge: "Daily Use",
+      badge: "Project Management",
       color: "#22C55E",
     },
     {
@@ -73,6 +73,20 @@ function TechStack() {
       logo: "/tech/proxyman.png",
       badge: "API Debugging",
       color: "#06B6D4",
+    },
+
+    {
+      name: "Charles Proxy",
+      logo: "/tech/charles.png",
+      badge: "Web Debugging",
+      color: "#318394",
+    },
+
+    {
+      name: "K6",
+      logo: "/tech/k6.png",
+      badge: "Load Testing",
+      color: "#7D64FF",
     },
   ];
 
