@@ -468,6 +468,11 @@ opacity:.45;
 
 }
 
+/* Navbar height অনুযায়ী adjust করো */
+section {
+  scroll-margin-top: 40px;
+}
+
 
 
 /* ==========================================
