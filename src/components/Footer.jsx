@@ -9,7 +9,7 @@ function Footer() {
       </p>
 
       <span>
-        QA Lead Engineer | Mobile • Web • API • Automation Testing
+        QA Lead Engineer | QA Specialist | Mobile • Web • API • Automation Testing
       </span>
 
     </footer>
