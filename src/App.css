@@ -341,25 +341,6 @@ transform:scale(1.12) rotate(-2deg);
 
 }
 
-/* ==============================
-   PREMIUM SCROLLBAR
-============================== */
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #050816;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--primary);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-light);
-}
 
 /* ==========================================
    PHASE 2 - ANIMATED BACKGROUND
@@ -494,26 +475,31 @@ opacity:.45;
 ========================================== */
 
 /* Chrome, Edge, Opera, Samsung Internet */
-::-webkit-scrollbar{
+
+/* Width */
+html::-webkit-scrollbar{
   width:12px;
 }
 
-::-webkit-scrollbar-track{
+html::-webkit-scrollbar-track{
   background:#14081f;
 }
 
-::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb{
   background:#a855f7;
   border-radius:999px;
   border:2px solid #14081f;
 }
 
-::-webkit-scrollbar-thumb:hover{
-  background:#FF5722;
+html::-webkit-scrollbar-thumb:hover{
+  background:#FF5722 !important;
 }
 
 /* Firefox */
-*{
-  scrollbar-width:auto;
-  scrollbar-color:#a855f7 #14081f;
+
+@supports (scrollbar-color: red blue) {
+  html{
+    scrollbar-width:auto;
+    scrollbar-color:#a855f7 #14081f;
+  }
 }
