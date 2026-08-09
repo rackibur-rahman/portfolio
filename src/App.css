@@ -469,8 +469,20 @@ opacity:.45;
 }
 
 /* Navbar height অনুযায়ী adjust করো */
+
+html {
+  scroll-behavior: smooth;
+}
+
 section {
   scroll-margin-top: 40px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: 200px;
+  }
 }
 
 

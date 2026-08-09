@@ -88,6 +88,13 @@ function TechStack() {
       badge: "Load Testing",
       color: "#7D64FF",
     },
+
+    {
+      name: "JMeter",
+      logo: "/tech/jmeter.png",
+      badge: "Load Testing",
+      color: "#CC2235",
+    },
   ];
 
   return (
