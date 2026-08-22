@@ -132,6 +132,8 @@ function Experience() {
         { name: "FedEx", logo: "/logos/fedex.png" },
         { name: "Nestlé", logo: "/logos/nestle.png" },
         { name: "Pfizer", logo: "/logos/pfizer.png" },
+        { name: "Pfizer", logo: "/logos/waze.png" },
+        { name: "Pfizer", logo: "/logos/lyft.png" },
       ],
     },
 

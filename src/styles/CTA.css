@@ -108,8 +108,10 @@ color:white;
 
 .secondary:hover{
 
-background:#a855f7;
+background:#FF5722;
 
-color:#050816;
+border:2px solid #FF5722;
+
+color:#ffffff;
 
 }

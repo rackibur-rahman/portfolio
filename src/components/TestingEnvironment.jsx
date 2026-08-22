@@ -91,6 +91,13 @@ function TestingEnvironment() {
               Nokia 1
             </div>
 
+            <div className="device-card nokia">
+              <div className="device-icon">
+                <FaAndroid />
+              </div>
+              Oppo A60 5G
+            </div>
+
           </div>
 
         </div>
@@ -149,6 +156,13 @@ function TestingEnvironment() {
                 <FaApple />
               </div>
               iPhone XR
+            </div>
+
+            <div className="device-card iphone">
+              <div className="device-icon">
+                <FaApple />
+              </div>
+              iPhone 13 Pro Max
             </div>
 
           </div>
