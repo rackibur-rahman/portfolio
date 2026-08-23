@@ -5,6 +5,8 @@ import Hero from "./components/Hero";
 import Highlights from "./components/Highlights";
 import Stats from "./components/Stats";
 import Achievements from "./components/Achievements";
+import BugLifecycleStory from "./components/BugLifecycleStory";
+import ShiftLeftQualityMap from "./components/ShiftLeftQualityMap";
 import TechStack from "./components/TechStack";
 import About from "./components/About";
 import Skills from "./components/Skills";
@@ -39,6 +41,14 @@ function App() {
 
       <section id="achievements">
         <Achievements />
+      </section>
+
+      <section id="BugLifecycleStory">
+        <BugLifecycleStory />
+      </section>
+
+      <section id="ShiftLeftQualityMap">
+        <ShiftLeftQualityMap />
       </section>
 
       <section id="tech-stack">
