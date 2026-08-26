@@ -1,8 +1,11 @@
 .about {
   max-width: 1200px;
   margin: auto;
+  background: #0a0a1a;
+  margin-bottom: 60px;
   padding: 80px 20px;
   color: #FF5722
+  
 }
 
 .section-title {
@@ -13,12 +16,12 @@
 
 .section-title h2 {
   font-size: 40px;
-  color: #a855f7;
+  color: #f8fafc;
   font-family: 'Chakra Petch', sans-serif;
 }
 
 .section-title p {
-  color: #FF5722;
+  color: #94a3b8;
   margin-top: 10px;
   font-family: 'Chakra Petch', sans-serif;
 }

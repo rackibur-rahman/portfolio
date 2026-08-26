@@ -11,6 +11,9 @@ import TechStack from "./components/TechStack";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
+import QualityImpactDashboard from "./components/QualityImpactDashboard";
+import HowIThink from "./components/HowIThink";
+import MentorshipTeamGrowth from "./components/MentorshipTeamGrowth";
 import TestingEnvironment from "./components/TestingEnvironment";
 import CaseStudies from "./components/CaseStudies";
 import Projects from "./components/Projects";
@@ -65,6 +68,18 @@ function App() {
 
       <section id="experience">
         <Experience />
+      </section>
+
+      <section id="QualityImpactDashboard">
+        <QualityImpactDashboard />
+      </section>
+
+      <section id="HowIThink">
+        <HowIThink />
+      </section>
+
+      <section id="MentorshipTeamGrowth">
+        <MentorshipTeamGrowth />
       </section>
 
       <section id="TestingEnvironment">

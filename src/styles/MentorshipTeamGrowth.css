@@ -1,0 +1,127 @@
+.mtg-section {
+  padding: 80px 20px;
+  background: #0a0a1a;
+  color: #fff;
+  font-family: inherit;
+  margin-bottom: 60px;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.mtg-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.mtg-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mtg-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.5px;
+}
+
+.mtg-subtitle {
+  color: #94a3b8;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.mtg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.mtg-card {
+  background: #12122a;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 16px;
+  padding: 28px 22px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.mtg-card:hover {
+  border-color: rgba(168, 85, 247, 0.65);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.15);
+}
+
+.mtg-icon {
+  font-size: 28px;
+  margin-bottom: 14px;
+  color: #c084fc;
+}
+
+.mtg-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: #c084fc;
+  margin-bottom: 8px;
+}
+
+.mtg-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 12px;
+}
+
+.mtg-card-desc {
+  font-size: 13.5px;
+  color: #94a3b8;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.mtg-quote {
+  background: #12122a;
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 14px;
+  padding: 24px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mtg-quote-mark {
+  font-size: 42px;
+  color: #a855f7;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.mtg-quote p {
+  color: #cbd5e1;
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin: 0 0 8px 0;
+  font-style: italic;
+}
+
+.mtg-quote-author {
+  color: #a855f7;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .mtg-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mtg-title {
+    font-size: 32px;
+  }
+}
