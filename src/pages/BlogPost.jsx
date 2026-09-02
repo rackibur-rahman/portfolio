@@ -6,6 +6,8 @@ import ArticleNavigation from "../components/ArticleNavigation";
 
 import "../styles/BlogPost.css";
 
+import profileImage from "../assets/profile.png";
+
 function renderContentBlock(block, index) {
   switch (block.type) {
     case "heading":
@@ -109,7 +111,7 @@ function BlogPost() {
           <div className="article-meta">
             <div className="article-author">
               <div className="article-author-avatar">
-                R
+                <img src={profileImage} alt="Rackibur Rahman" />
               </div>
 
               <div>
