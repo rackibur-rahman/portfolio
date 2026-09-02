@@ -96,14 +96,14 @@
 /* Home */
 
 .nav-links li:nth-child(1) a:hover{
-  color:#38bdf8;
+  color:#0cadf3;
   transform:translateY(-2px);
 }
 
 /* About */
 
 .nav-links li:nth-child(2) a:hover{
-  color:#22d3ee;
+  color:#5bdff3;
   transform:translateY(-2px);
 }
 
@@ -136,10 +136,17 @@
 }
 
 
-/* Contact */
+/* Blog */
 
 .nav-links li:nth-child(7) a:hover{
   color:#fb7185;
+  transform:translateY(-2px);
+}
+
+/* Contact */
+
+.nav-links li:nth-child(8) a:hover{
+  color:#c69d06;
   transform:translateY(-2px);
 }
 
@@ -301,7 +308,7 @@
 
 
 
-/* Contact */
+/* Blog */
 
 .nav-links li:nth-child(7) a::after{
 
@@ -309,6 +316,25 @@
     90deg,
     #ec4899,
     #fb7185
+  );
+
+}
+
+.nav-links li:nth-child(7) a:hover::after{
+
+  box-shadow:0 0 12px rgba(236,72,153,.45);
+
+}
+
+
+/* Contact */
+
+.nav-links li:nth-child(8) a::after{
+
+  background:linear-gradient(
+    90deg,
+    #c69d06,
+    #fb71a6
   );
 
 }

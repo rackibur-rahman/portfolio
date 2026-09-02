@@ -1,11 +1,22 @@
+import { Link, useLocation } from "react-router-dom";
 import "../styles/Navbar.css";
 
 function Navbar() {
+  const location = useLocation();
+
+  const isHomePage = location.pathname === "/";
+
+  const handleHomeNavigation = (section) => {
+    if (isHomePage) {
+      document.getElementById(section)?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <nav className="navbar">
-
       <div className="logo-container">
-
         <div className="logo-brand">
           <img
             src="/favicon.png"
@@ -13,9 +24,7 @@ function Navbar() {
             className="logo-icon"
           />
 
-          <h1 className="logo-text">
-            QA Specialist.
-          </h1>
+          <h1 className="logo-text">QA Specialist.</h1>
         </div>
 
         <div className="brand-tagline">
@@ -25,42 +34,73 @@ function Navbar() {
         <div className="brand-subtag">
           Every release leaves my name on it ⭐
         </div>
-
       </div>
 
-
       <ul className="nav-links">
-
         <li>
-          <a href="#home">Home</a>
+          <Link to="/">Home</Link>
         </li>
 
         <li>
-          <a href="#about">About</a>
+          <Link
+            to="/#about"
+            onClick={() => handleHomeNavigation("about")}
+          >
+            About
+          </Link>
         </li>
 
         <li>
-          <a href="#skills">Skills</a>
+          <Link
+            to="/#skills"
+            onClick={() => handleHomeNavigation("skills")}
+          >
+            Skills
+          </Link>
         </li>
 
         <li>
-          <a href="#experience">Experience</a>
+          <Link
+            to="/#experience"
+            onClick={() => handleHomeNavigation("experience")}
+          >
+            Experience
+          </Link>
         </li>
 
         <li>
-          <a href="#projects">Projects</a>
+          <Link
+            to="/#projects"
+            onClick={() => handleHomeNavigation("projects")}
+          >
+            Projects
+          </Link>
         </li>
 
         <li>
-          <a href="#case-studies">Case Studies</a>
+          <Link
+            to="/#case-studies"
+            onClick={() => handleHomeNavigation("case-studies")}
+          >
+            Case Studies
+          </Link>
         </li>
 
         <li>
-          <a href="#contact">Contact</a>
+          <Link to="/blog" className="blog-nav-link">
+            Blog
+          </Link>
         </li>
 
+        <li>
+          <Link
+            to="/#contact"
+            onClick={() => handleHomeNavigation("contact")}
+          >
+            Contact
+          </Link>
+        </li>
       </ul>
-
 
       <a
         href="/Rackibur_Rahman_Resume.pdf"
@@ -69,7 +109,6 @@ function Navbar() {
       >
         Resume
       </a>
-
     </nav>
   );
 }
