@@ -29,6 +29,7 @@ import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
 import BackToTop from "./components/BackToTop";
 import ScrollToTop from "./components/ScrollToTop";
+import HashScroll from "./components/HashScroll";
 
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -116,6 +117,7 @@ function App() {
     <div className="app">
       <ScrollProgress />
       <ScrollToTop />
+      <HashScroll />
 
       <Navbar />
 
