@@ -6,7 +6,7 @@ import ArticleNavigation from "../components/ArticleNavigation";
 
 import "../styles/BlogPost.css";
 
-import profileImage from "../assets/profile.png";
+import profileImage from "../assets/Profile.png";
 
 function renderContentBlock(block, index) {
   switch (block.type) {
