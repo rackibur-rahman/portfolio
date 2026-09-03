@@ -1086,50 +1086,375 @@ export const blogs = [
 
     category: "Mobile Testing",
 
-    date: "Coming Soon",
+    date: "September 3, 2026",
 
-    readTime: "6 min read",
+    readTime: "8 mins read",
 
     featured: false,
 
     image:
       "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=85",
 
-    tags: ["Mobile Testing", "Android", "iOS"],
+    tags: [
+    "Mobile Testing",
+    "Android Testing",
+    "iOS Testing",
+    "Manual Testing",
+    "QA",
+    "App Testing",
+    "Exploratory Testing",
+    "Regression Testing"
+  ],
 
     content: [
       {
-        type: "paragraph",
-        text:
-          "Mobile applications have challenges that do not always exist on the web. Device differences, interruptions, permissions, network changes, and operating-system behavior can all affect the user experience.",
-      },
+      type: "paragraph",
+      text: "Mobile applications are more than just a collection of screens and buttons. A good mobile app needs to work reliably across different devices, operating systems, screen sizes, network conditions, and real-world usage patterns. When I test a mobile application, I don't only verify whether a feature works. I also look at how the application behaves when users interact with it in unexpected ways."
+    },
 
-      {
-        type: "heading",
-        text: "Areas I Usually Cover",
-      },
+    {
+      type: "heading",
+      text: "1. Start With the Core User Journey"
+    },
 
-      {
-        type: "list",
-        items: [
-          "Installation and update behavior",
-          "Different screen sizes",
-          "App background and foreground behavior",
-          "Network switching",
-          "Permissions",
-          "Push notifications",
-          "Keyboard behavior",
-          "Orientation changes",
-          "Low battery and resource conditions",
-        ],
-      },
+    {
+      type: "paragraph",
+      text: "Before exploring edge cases, I first make sure the primary user journey works from beginning to end. I identify the most important actions a user is expected to perform and verify that the complete flow works without interruption."
+    },
 
-      {
-        type: "callout",
-        title: "Coming Soon",
-        text:
-          "A detailed mobile testing checklist and practical examples will be added here.",
-      },
+    {
+      type: "list",
+      items: [
+        "App installation and first launch",
+        "Registration and login",
+        "Onboarding and permissions",
+        "Navigation between major screens",
+        "Creating, editing, or deleting important data",
+        "Logout and re-login",
+        "App relaunch after completing a flow"
+      ]
+    },
+
+    {
+      type: "paragraph",
+      text: "This gives me a baseline. If the core journey itself is unstable, there is little value in moving immediately into deeper exploratory testing."
+    },
+
+    {
+      type: "heading",
+      text: "2. Test Different Devices and Screen Sizes"
+    },
+
+    {
+      type: "paragraph",
+      text: "A mobile application can behave differently depending on the device. Screen dimensions, aspect ratios, OS versions, hardware capabilities, and manufacturer-specific behavior can all affect the user experience."
+    },
+
+    {
+      type: "list",
+      items: [
+        "Different screen sizes and resolutions",
+        "Different Android and iOS versions",
+        "Small and large devices",
+        "Different device orientations",
+        "Devices with different performance capabilities",
+        "Notch, Dynamic Island, and safe-area behavior"
+      ]
+    },
+
+    {
+      type: "paragraph",
+      text: "I pay particular attention to layouts that look correct on one device but become clipped, misaligned, or inaccessible on another."
+    },
+
+    {
+      type: "heading",
+      text: "3. Check App Lifecycle Behavior"
+    },
+
+    {
+      type: "paragraph",
+      text: "Mobile users frequently switch between applications, lock their phones, receive notifications, or terminate an application unexpectedly. Because of that, I always test how the application behaves throughout its lifecycle."
+    },
+
+    {
+      type: "list",
+      items: [
+        "Launch the app from a fresh state",
+        "Send the app to the background and return",
+        "Lock and unlock the device while using the app",
+        "Force close and reopen the app",
+        "Switch between multiple applications",
+        "Restart the device and launch the app again"
+      ]
+    },
+
+    {
+      type: "paragraph",
+      text: "I also verify whether the application correctly preserves or resets the user's state after these actions. Unexpected data loss or navigation changes can create serious usability issues."
+    },
+
+    {
+      type: "heading",
+      text: "4. Test Network Conditions"
+    },
+
+    {
+      type: "paragraph",
+      text: "A mobile application should not assume that the user always has a fast and stable internet connection. Network behavior is therefore an important part of my testing."
+    },
+
+    {
+      type: "list",
+      items: [
+        "Stable Wi-Fi connection",
+        "Mobile data",
+        "Slow network conditions",
+        "Temporary network interruption",
+        "Switching from Wi-Fi to mobile data",
+        "Turning the network off during an API request",
+        "Restoring connectivity after an offline state"
+      ]
+    },
+
+    {
+      type: "paragraph",
+      text: "I check whether the user receives a meaningful error message, whether loading states are handled properly, and whether the application recovers correctly once connectivity is restored."
+    },
+
+    {
+      type: "heading",
+      text: "5. Validate Permissions"
+    },
+
+    {
+      type: "paragraph",
+      text: "Mobile applications often depend on permissions such as camera, location, notifications, contacts, photos, or microphone access. I test both permission-granted and permission-denied scenarios."
+    },
+
+    {
+      type: "list",
+      items: [
+        "Allow the permission when requested",
+        "Deny the permission",
+        "Deny the permission multiple times",
+        "Re-enable the permission from device settings",
+        "Use the feature after permission status changes",
+        "Check the application's behavior when the permission is unavailable"
+      ]
+    },
+
+    {
+      type: "paragraph",
+      text: "The goal is not only to verify that the permission prompt appears, but also to make sure the application handles every permission state gracefully."
+    },
+
+    {
+      type: "heading",
+      text: "6. Test Interruptions and Real-World Scenarios"
+    },
+
+    {
+      type: "paragraph",
+      text: "Real users rarely interact with an application in a controlled testing environment. Calls, notifications, alarms, system dialogs, screenshots, and other interruptions can happen at any time."
+    },
+
+    {
+      type: "list",
+      items: [
+        "Receive a phone call while using the app",
+        "Receive a notification during an active flow",
+        "Open the notification panel",
+        "Lock the device during a transaction or form submission",
+        "Take a screenshot where applicable",
+        "Switch applications during a long-running operation"
+      ]
+    },
+
+    {
+      type: "paragraph",
+      text: "I verify whether the application resumes correctly after the interruption and whether any entered data, transaction state, or navigation state is unexpectedly lost."
+    },
+
+    {
+      type: "heading",
+      text: "7. Check UI, Usability, and Accessibility"
+    },
+
+    {
+      type: "paragraph",
+      text: "Functional correctness is only one part of mobile quality. I also evaluate whether the interface is clear, consistent, and usable on different devices."
+    },
+
+    {
+      type: "list",
+      items: [
+        "Text clipping and overlapping elements",
+        "Incorrect spacing or alignment",
+        "Buttons that are difficult to tap",
+        "Keyboard covering input fields",
+        "Unexpected scrolling behavior",
+        "Landscape and portrait layout issues",
+        "Inconsistent typography and icons",
+        "Poor contrast or unreadable text",
+        "Missing loading, empty, or error states"
+      ]
+    },
+
+    {
+      type: "paragraph",
+      text: "I also consider accessibility basics such as readable text, sufficient touch targets, meaningful labels, and whether important information is communicated without relying only on color."
+    },
+
+    {
+      type: "heading",
+      text: "8. Validate Data Persistence"
+    },
+
+    {
+      type: "paragraph",
+      text: "Data persistence is another area I pay close attention to. A user should not unexpectedly lose information simply because the application was closed, restarted, or temporarily interrupted."
+    },
+
+    {
+      type: "list",
+      items: [
+        "Close and reopen the application",
+        "Log out and log back in",
+        "Switch between screens and return",
+        "Edit existing information",
+        "Create data and verify it after relaunch",
+        "Delete data and verify that it remains deleted"
+      ]
+    },
+
+    {
+      type: "paragraph",
+      text: "I compare the expected state with the actual state after each transition. This is particularly important for applications that rely heavily on local storage, caching, or background synchronization."
+    },
+
+    {
+      type: "heading",
+      text: "9. Test Performance and Stability"
+    },
+
+    {
+      type: "paragraph",
+      text: "An application can be functionally correct and still provide a poor experience if it is slow, unstable, or resource-heavy. I therefore look for performance-related issues throughout functional testing."
+    },
+
+    {
+      type: "list",
+      items: [
+        "Slow screen loading",
+        "Long API response handling",
+        "Freezing or UI unresponsiveness",
+        "Unexpected crashes",
+        "Excessive loading indicators",
+        "Slow scrolling or animations",
+        "Repeated actions causing instability",
+        "Memory or battery-related concerns"
+      ]
+    },
+
+    {
+      type: "paragraph",
+      text: "I don't treat performance as something that should only be tested at the end. If I notice abnormal behavior during functional testing, I investigate it as part of the same test cycle."
+    },
+
+    {
+      type: "heading",
+      text: "10. Verify Error Handling"
+    },
+
+    {
+      type: "paragraph",
+      text: "I intentionally try to make the application fail. This helps reveal whether the product has been designed only for successful scenarios or whether it can guide users safely when something goes wrong."
+    },
+
+    {
+      type: "list",
+      items: [
+        "Invalid input",
+        "Missing required fields",
+        "Incorrect credentials",
+        "Failed API requests",
+        "Network timeout",
+        "Server errors",
+        "Expired sessions",
+        "Unauthorized actions",
+        "Unexpected or unavailable data"
+      ]
+    },
+
+    {
+      type: "paragraph",
+      text: "Good error handling should help users understand what happened and what they can do next. Generic, misleading, or missing error messages can turn a recoverable problem into a frustrating experience."
+    },
+
+    {
+      type: "callout",
+      title: "QA Perspective",
+      text: "When testing a mobile app, I try to think beyond the test case. I ask: What happens if the user loses the network? What if they close the app at this exact moment? What if a permission is denied? What if they tap the button repeatedly? What if the device is slow? These questions often uncover issues that happy-path testing never finds."
+    },
+
+    {
+      type: "heading",
+      text: "11. Perform Regression Testing"
+    },
+
+    {
+      type: "paragraph",
+      text: "Whenever a new feature or bug fix is introduced, I don't limit testing to the changed area. I identify the features that could potentially be affected and run targeted regression tests around them."
+    },
+
+    {
+      type: "list",
+      items: [
+        "Previously working critical flows",
+        "Related features",
+        "Navigation between affected screens",
+        "API-dependent functionality",
+        "Authentication and session behavior",
+        "Data creation and persistence",
+        "Platform-specific functionality"
+      ]
+    },
+
+    {
+      type: "paragraph",
+      text: "The goal is to make sure that fixing one problem hasn't introduced another somewhere else."
+    },
+
+    {
+      type: "heading",
+      text: "12. Test Like a Real User"
+    },
+
+    {
+      type: "paragraph",
+      text: "Finally, I step away from the test cases and use the application like a real user. I explore the product naturally, move between features, make mistakes, interrupt flows, and try unexpected actions."
+    },
+
+    {
+      type: "paragraph",
+      text: "This exploratory mindset is often where I discover the most interesting issues. A test case tells me what should happen, but real-user testing helps me understand how the product actually feels and behaves."
+    },
+
+    {
+      type: "heading",
+      text: "Final Thoughts"
+    },
+
+    {
+      type: "paragraph",
+      text: "Mobile testing is not simply about checking whether buttons work or screens load correctly. It is about understanding how software behaves in the unpredictable environment where real users interact with it."
+    },
+
+    {
+      type: "paragraph",
+      text: "My approach is to combine structured functional testing with exploratory testing, negative scenarios, device coverage, lifecycle testing, network validation, regression testing, and real-world usage. The goal is simple: don't just verify that the feature works. Verify that it continues to work when real users interact with it in ways we didn't expect."
+    }
     ],
   },
 ];
