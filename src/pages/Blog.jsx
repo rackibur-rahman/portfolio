@@ -84,36 +84,44 @@ function Blog() {
           </div>
 
           <div className="blog-filters">
-            {categories.map((category) => (
-              <button
-                key={category}
-                type="button"
-                className={
-                  activeCategory === category
-                    ? "blog-filter active"
-                    : "blog-filter"
-                }
-                onClick={() => setActiveCategory(category)}
-              >
-                {category}
-              </button>
-            ))}
+            {categories.map((category) => {
+              const count =
+                category === "All"
+                  ? blogs.length
+                  : blogs.filter(
+                      (blog) => blog.category === category
+                    ).length;
+
+              return (
+                <button
+                  key={category}
+                  type="button"
+                  className={
+                    activeCategory === category
+                      ? "blog-filter active"
+                      : "blog-filter"
+                  }
+                  onClick={() => setActiveCategory(category)}
+                >
+                  <span>{category}</span>
+                  <span className="blog-filter-count">
+                    {count}
+                  </span>
+                </button>
+              );
+            })}
           </div>
 
           <div className="blog-grid">
-            {filteredBlogs
-              .filter((blog) => blog.slug !== featuredBlog?.slug)
-              .map((blog) => (
-                <BlogCard
-                  key={blog.slug}
-                  blog={blog}
-                />
-              ))}
+            {filteredBlogs.map((blog) => (
+              <BlogCard
+                key={blog.slug}
+                blog={blog}
+              />
+            ))}
           </div>
 
-          {filteredBlogs.filter(
-            (blog) => blog.slug !== featuredBlog?.slug
-          ).length === 0 && (
+          {filteredBlogs.length === 0 && (
             <div className="blog-empty">
               <span>More articles are coming soon.</span>
             </div>

@@ -12,7 +12,11 @@ function renderContentBlock(block, index) {
   switch (block.type) {
     case "heading":
       return (
-        <h2 key={index} className="article-heading">
+        <h2
+          key={index}
+          id={`section-${index}`}
+          className="article-heading"
+        >
           {block.text}
         </h2>
       );
@@ -31,6 +35,13 @@ function renderContentBlock(block, index) {
             <li key={itemIndex}>{item}</li>
           ))}
         </ul>
+      );
+
+    case "code":
+      return (
+        <pre key={index} className="article-code">
+          <code>{block.code}</code>
+        </pre>
       );
 
     case "callout":
@@ -90,8 +101,16 @@ function BlogPost() {
       ? blogs[currentIndex - 1]
       : null;
 
+  const headingBlocks = blog.content
+    .map((block, index) => ({
+      ...block,
+      originalIndex: index,
+    }))
+    .filter((block) => block.type === "heading");
+
   return (
     <main className="article-page">
+      {/* Article Header */}
       <header className="article-header">
         <div className="article-container">
           <Link to="/blog" className="article-back">
@@ -111,7 +130,10 @@ function BlogPost() {
           <div className="article-meta">
             <div className="article-author">
               <div className="article-author-avatar">
-                <img src={profileImage} alt="Rackibur Rahman" />
+                <img
+                  src={profileImage}
+                  alt="Rackibur Rahman"
+                />
               </div>
 
               <div>
@@ -130,8 +152,13 @@ function BlogPost() {
         </div>
       </header>
 
+      {/* Article Content */}
       <div className="article-container">
-        <div className="article-cover-wrapper">
+        {/* Cover Image */}
+        <div
+          id="article-start"
+          className="article-cover-wrapper"
+        >
           <img
             src={blog.image}
             alt={blog.title}
@@ -140,38 +167,41 @@ function BlogPost() {
         </div>
 
         <div className="article-layout">
+          {/* Sidebar */}
           <aside className="article-sidebar">
             <div className="article-sidebar-inner">
               <span>IN THIS ARTICLE</span>
 
               <div className="article-sidebar-line" />
 
-              {blog.content
-                .filter(
-                  (block) => block.type === "heading"
-                )
-                .map((block, index) => (
-                  <div
-                    className="article-sidebar-item"
-                    key={index}
-                  >
-                    {block.text}
-                  </div>
-                ))}
+              {headingBlocks.map((block) => (
+                <a
+                  key={block.originalIndex}
+                  href={`#section-${block.originalIndex}`}
+                  className="article-sidebar-item"
+                >
+                  {block.text}
+                </a>
+              ))}
             </div>
           </aside>
 
+          {/* Main Article */}
           <article className="article-content">
             {blog.content.map(renderContentBlock)}
 
-            <div className="article-tags">
-              {blog.tags.map((tag) => (
-                <span key={tag}>{tag}</span>
-              ))}
-            </div>
+            {/* Tags */}
+            {blog.tags?.length > 0 && (
+              <div className="article-tags">
+                {blog.tags.map((tag) => (
+                  <span key={tag}>{tag}</span>
+                ))}
+              </div>
+            )}
           </article>
         </div>
 
+        {/* Previous / Next Article */}
         <ArticleNavigation
           previous={previous}
           next={next}
