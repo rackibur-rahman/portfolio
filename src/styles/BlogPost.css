@@ -344,6 +344,58 @@
   font-weight: 800;
 }
 
+
+.article-translation {
+  margin-top: 28px;
+}
+
+.article-translation-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid rgba(217, 70, 239, 0.3);
+  border-radius: 999px;
+  color: #e9d5ff;
+  background: rgba(217, 70, 239, 0.08);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.article-translation-button:hover:not(:disabled) {
+  border-color: rgba(217, 70, 239, 0.55);
+  background: rgba(217, 70, 239, 0.15);
+  transform: translateY(-2px);
+}
+
+.article-translation-button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.translation-spinner {
+  width: 13px;
+  height: 13px;
+  border: 2px solid rgba(233, 213, 255, 0.25);
+  border-top-color: #d946ef;
+  border-radius: 50%;
+  animation: translationSpin 0.7s linear infinite;
+}
+
+.translation-error {
+  margin: 10px 0 0;
+  color: #fca5a5;
+  font-size: 12px;
+}
+
+@keyframes translationSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 800px) {
   .article-header {
     padding: 55px 0 40px;

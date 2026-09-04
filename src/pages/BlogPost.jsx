@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import { blogs, getBlogBySlug } from "../data/blogs";
@@ -66,6 +67,11 @@ function BlogPost() {
 
   const blog = getBlogBySlug(slug);
 
+  const [isBangla, setIsBangla] = useState(false);
+  const [translatedArticle, setTranslatedArticle] = useState(null);
+  const [isTranslating, setIsTranslating] = useState(false);
+  const [translationError, setTranslationError] = useState(false);
+
   if (!blog) {
     return (
       <main className="article-not-found">
@@ -101,12 +107,56 @@ function BlogPost() {
       ? blogs[currentIndex - 1]
       : null;
 
-  const headingBlocks = blog.content
+  const article = translatedArticle || blog;
+
+  const headingBlocks = article.content
     .map((block, index) => ({
       ...block,
       originalIndex: index,
     }))
     .filter((block) => block.type === "heading");
+
+  const handleTranslation = async () => {
+    if (translatedArticle) {
+      setIsBangla(!isBangla);
+      return;
+    }
+
+    setIsTranslating(true);
+    setTranslationError(false);
+
+    try {
+      const response = await fetch("/api/translate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          article: {
+            title: blog.title,
+            excerpt: blog.excerpt,
+            content: blog.content,
+          },
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data.error || "Translation failed"
+        );
+      }
+
+      setTranslatedArticle(data.article);
+      setIsBangla(true);
+    } catch (error) {
+      console.error("Translation error:", error);
+      setTranslationError(true);
+    } finally {
+      setIsTranslating(false);
+    }
+  };
 
   return (
     <main className="article-page">
@@ -121,10 +171,12 @@ function BlogPost() {
             {blog.category}
           </div>
 
-          <h1>{blog.title}</h1>
+          <h1>{isBangla ? article.title : blog.title}</h1>
 
           <p className="article-excerpt">
-            {blog.excerpt}
+            {isBangla
+              ? article.excerpt
+              : blog.excerpt}
           </p>
 
           <div className="article-meta">
@@ -149,6 +201,33 @@ function BlogPost() {
               <span>{blog.readTime}</span>
             </div>
           </div>
+
+          {/* Translation Button */}
+          <div className="article-translation">
+            <button
+              type="button"
+              className="article-translation-button"
+              onClick={handleTranslation}
+              disabled={isTranslating}
+            >
+              {isTranslating ? (
+                <>
+                  <span className="translation-spinner" />
+                  Translating...
+                </>
+              ) : isBangla ? (
+                <>🇬🇧 Read in English</>
+              ) : (
+                <>🇧🇩 বাংলায় দেখুন</>
+              )}
+            </button>
+
+            {translationError && (
+              <p className="translation-error">
+                Translation failed. Please try again.
+              </p>
+            )}
+          </div>
         </div>
       </header>
 
@@ -170,7 +249,11 @@ function BlogPost() {
           {/* Sidebar */}
           <aside className="article-sidebar">
             <div className="article-sidebar-inner">
-              <span>IN THIS ARTICLE</span>
+              <span>
+                {isBangla
+                  ? "এই আর্টিকেলে"
+                  : "IN THIS ARTICLE"}
+              </span>
 
               <div className="article-sidebar-line" />
 
@@ -188,7 +271,7 @@ function BlogPost() {
 
           {/* Main Article */}
           <article className="article-content">
-            {blog.content.map(renderContentBlock)}
+            {article.content.map(renderContentBlock)}
 
             {/* Tags */}
             {blog.tags?.length > 0 && (

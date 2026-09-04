@@ -11,7 +11,7 @@ export const blogs = [
 
     date: "September 2, 2026",
 
-    readTime: "7 min read",
+    readTime: "7 mins read",
 
     featured: true,
 
